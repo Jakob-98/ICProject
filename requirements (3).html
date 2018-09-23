@@ -16,7 +16,7 @@
 <h2>Groep Info</h2>
 Groep #1 
 <ul>
-	<li>Dani van de Pol (4678834)</li>test
+	<li>Dani van de Pol (4678834)</li>
 	<li>Niels Den Ouden(1379100)</li>
 	<li>Mennolt Verhaar (4674685)</li>
 	<li>Jakob Serlier (4594924)</li>
@@ -948,50 +948,435 @@ Groep #1
   </table>
 <br/>
 
+
+
+
+<!-- USE CASES -->
+
+
+
 <h2>Use Cases</h2>
 
 <table style="border:1px solid;"> 
 	<tr>
-		<td colspan="4"><strong>Use case name and identifier: </strong>#NAAM</td>
+		<td colspan="4"><strong>Use case name and identifier: </strong>U1: Maken en gebruiken profiel/ wallet integratie
+		</td>
 	</tr>
 	<tr>
 	  <td><strong>Objective:</strong></td>
-	  <td colspan="5">...</td>
+	  <td colspan="5">Chauffeurs en reizigers hebben een profiel nodig om ritten aan te kunnen bieden respectievelijk te zoeken. Daarnaast dient dit profiel over een wallet te beschikken om transacties te kunnen verwerken.</td>
 	</tr>
 	<tr>
 	  <td><strong>Priority:</strong></td>
-	  <td colspan="5">...</td>
+	  <td colspan="5">5. Erg belangrijk</td>
 	</tr>
 	<tr>
 	  <td><strong>Flow of Events:</strong></td>
-	  <td colspan="5">...</td>
+	  <td colspan="5"> - begint wanneer een chauffeur/klant van het platform gebruik wil maken.
+			- na het invoeren van gegevens stelt het platform een account met wallet beschikbaar
+		 </td>
 	</tr>
 	<tr>
 	  <td><strong>Includes:</strong></td>
-	  <td colspan="5">....</td>
+	  <td colspan="5">U7: Gebruik GUI (Graphical User Interface)
+		</td>
 	</tr>
 	<tr>
 	  <td><strong>Extends:</strong></td>
-	  <td colspan="5">....</td>
+	  <td colspan="5">N.v.t.</td>
 	</tr>
 	<tr>
 	  <td><strong>Generalizes:</strong></td>
-	  <td colspan="5">....</td>
+	  <td colspan="5">N.v.t.</td>
 	</tr>
 	<tr>
 	  <td><strong>Preconditions:</strong></td>
-	  <td colspan="5">....</td>
+	  <td colspan="5">De gebruiker bezoekt het platform voor het eerst en heeft nog geen account
+		</td>
 	</tr>
 	<tr>
 	  <td><strong>Postconditions:</strong></td>
-	  <td colspan="5">....</td>
+	  <td colspan="5">De gebruiker beschikt over een persoonlijk account met een functionele wallet.
+		</td>
 	</tr>
 	<tr>
 	  <td><strong>Notes/Issues:</strong></td>
-	  <td colspan="5">....</td>
+	  <td colspan="5">Alleen van toepassing bij het eerste bezoek aan het platform. App is onbruikbaar zonder profiel.</td>
 	</tr>
   </table>
 <br/>
+
+<table style="border:1px solid;"> 
+	<tr>
+		<td colspan="4"><strong>Use case name and identifier: </strong>U2: Sturen berichten</td>
+	</tr>
+	<tr>
+	  <td><strong>Objective:</strong></td>
+	  <td colspan="5">Om contact tussen de chauffeur en een reiziger mogelijk te maken, wordt er gewerkt met een berichtendienst, deze is geïntegreerd in de app.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td>
+	  <td colspan="5"> 2: Relatief onbelangrijk
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Flow of Events:</strong></td>
+	  <td colspan="5"> De persoon die contact op wilt nemen opent via het menu het berichtenscherm, waar de andere persoon staat. Het is ook mogelijk om via het profiel contact op te nemen met iemand. Hiermee kan contact op worden genomen. 
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Includes:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Extends:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Generalizes:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Preconditions:</strong></td>
+	  <td colspan="5">Een persoon wilt contact opnemen met een ander persoon.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Postconditions:</strong></td>
+	  <td colspan="5">De personen kunnen berichten naar elkaar versturen, dit houdt op als iemand niet meer bericht vanzelfsprekend. 
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Notes/Issues:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+  </table>
+<br/>
+
+<table style="border:1px solid;"> 
+	<tr>
+		<td colspan="4"><strong>Use case name and identifier: </strong>U3: Aanvraag rit
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Objective:</strong></td>
+	  <td colspan="5">Een klant kan beschikbare en voor hem/haar nuttige ritten aanvragen.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td>
+	  <td colspan="5"> 5. Erg belangrijk
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Flow of Events:</strong></td>
+	  <td colspan="5"> - Een klant zoekt naar beschikbare ritten met grofweg dezelfde begin- en eindlocatie.
+			- De klant vraagt de rit aan en wacht op een reactie.</td>
+	</tr>
+	<tr>
+	  <td><strong>Includes:</strong></td>
+	  <td colspan="5">U4: Aanbieden rit en goedkeuren passagier en U6: Gebruik ritsysteem.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Extends:</strong></td>
+	  <td colspan="5">N.v.t.</td>
+	</tr>
+	<tr>
+	  <td><strong>Generalizes:</strong></td>
+	  <td colspan="5">N.v.t.</td>
+	</tr>
+	<tr>
+	  <td><strong>Preconditions:</strong></td>
+	  <td colspan="5">De klant zoekt naar een rit als vervoersmiddel.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Postconditions:</strong></td>
+	  <td colspan="5">De klant heeft een rit aangevraagd en krijgt later reactie van de chauffeur.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Notes/Issues:</strong></td>
+	  <td colspan="5">Maakt in lichte mate gebruik van U4 en in grotere mate van U6.
+		</td>
+	</tr>
+  </table>
+<br/>
+
+<table style="border:1px solid;"> 
+	<tr>
+		<td colspan="4"><strong>Use case name and identifier: </strong>U4: Aanbieden rit en goedkeuren passagier</td>
+	</tr>
+	<tr>
+	  <td><strong>Objective:</strong></td>
+	  <td colspan="5">Een chauffeur kan zijn/haar ritten op het platform aanbieden en eventuele carpoolers accepteren</td>
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td>
+	  <td colspan="5">5. Erg belangrijk
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Flow of Events:</strong></td>
+	  <td colspan="5">- Een chauffeur voert zijn/haar ritten in op het platform.
+			- De chauffeur ontvangt verzoeken van mensen die willen meerijden.
+			- De chauffeur kan de verzoeken accepteren of weigeren.
+			</td>
+	</tr>
+	<tr>
+	  <td><strong>Includes:</strong></td>
+	  <td colspan="5">U3: Aanvraag rit en U6: Gebruik ritsysteem.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Extends:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Generalizes:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Preconditions:</strong></td>
+	  <td colspan="5">Een chauffeur heeft plek over voor carpoolers gedurende de rit en wil die plekken opvullen.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Postconditions:</strong></td>
+	  <td colspan="5">Een chauffeur krijgt verzoeken van carpoolers binnen en kan die goedkeuren of weigeren.</td>
+	</tr>
+	<tr>
+	  <td><strong>Notes/Issues:</strong></td>
+	  <td colspan="5">Voor het goedkeuren of weigeren kan eventueel contact worden gelegd via de berichtendienst (U2).
+		</td>
+	</tr>
+  </table>
+<br/>
+
+<table style="border:1px solid;"> 
+	<tr>
+		<td colspan="4"><strong>Use case name and identifier: </strong>U5: Ratingsysteem
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Objective:</strong></td>
+	  <td colspan="5">Chauffeurs en carpoolers kunnen elkaar waarderingen geven op het platform na een uitgevoerde rit.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td>
+	  <td colspan="5"> 2. Relatief onbelangrijk
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Flow of Events:</strong></td>
+	  <td colspan="5">- Een gebruiker krijgt na de rit het verzoek om te beoordelen.
+			- De gebruiker beoordeelt de rit en verstuurt de beoordeling (ook wel rating).
+			- De rating wordt opgeslagen in het systeem en kenbaar gemaakt aan andere gebruikers.
+			</td>
+	</tr>
+	<tr>
+	  <td><strong>Includes:</strong></td>
+	  <td colspan="5">U6: Gebruik ritsysteem
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Extends:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Generalizes:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Preconditions:</strong></td>
+	  <td colspan="5">De gebruikers van het platform willen hun feedback kwijt en anderen vertellen over hun rit.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Postconditions:</strong></td>
+	  <td colspan="5">Een functionerend automatisch formulier waarop een beoordeling kan worden geschreven welke automatisch verwerkt wordt tot een goede of slechte rating.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Notes/Issues:</strong></td>
+	  <td colspan="5"> Belangrijk is dat het ritsysteem goed werkt (U6) om te voorkomen dat gebruikers elkaar zomaar kunnen beoordelen.
+		</td>
+	</tr>
+  </table>
+<br/>
+
+<table style="border:1px solid;"> 
+	<tr>
+		<td colspan="4"><strong>Use case name and identifier: </strong>U6: Gebruik ritsysteem
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Objective:</strong></td>
+	  <td colspan="5"> Passagiers en chauffeurs kunnen gebruik maken van het ritsysteem om ritten te zoeken en aan te bieden. Zonder het ritsysteem kunnen er geen chauffeurs aan passagiers worden gekoppeld en is de app niet geschikt om te gebruiken.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td>
+	  <td colspan="5"> 5: Erg belangrijk
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Flow of Events:</strong></td>
+	  <td colspan="5"> Een gebruiker is op zoek naar een rit. Daarvoor voert hij of zij enkele zoekcriteria in, waarna er een lijst van mogelijke ritten volgt. De gebruiker kan hieruit een chauffeur kiezen.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Includes:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Extends:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Generalizes:</strong></td>
+	  <td colspan="5">U3: Aanvraag rit en U4: Aanbieden rit en goedkeuren passagier
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Preconditions:</strong></td>
+	  <td colspan="5">De reiziger wil een geschikte rit vinden naar een bepaalde bestemming.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Postconditions:</strong></td>
+	  <td colspan="5">De reiziger heeft een geschikte rit gevonden naar een bepaalde bestemming.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Notes/Issues:</strong></td>
+	  <td colspan="5">U6 is de overkoepelende use case van U3 en U4. U6 is echter van groot belang, want het verbindt twee belangrijke elementen, zodat het platform als het ware ontstaat.</td>
+	</tr>
+  </table>
+<br/>
+
+<table style="border:1px solid;"> 
+	<tr>
+		<td colspan="4"><strong>Use case name and identifier: </strong>U7: Gebruik GUI (Graphical User Interface)
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Objective:</strong></td>
+	  <td colspan="5">Om de app te gebruiken moeten gebruikers (iedereen die de app gedownload heeft) een scherm voor zich hebben, de GUI is eigenlijk alles wat je ziet op het scherm, bijvoorbeeld een kaart, profielfoto, maar ook het uiterlijk (kleuren bijvoorbeeld) van de app.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td>
+	  <td colspan="5">5: Erg belangrijk
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Flow of Events:</strong></td>
+	  <td colspan="5">Als de app geopend/ gebruikt wordt, heeft de gebruiker de Graphical User Interface voor zich. Hier hoeft de gebruiker niets voor te doen.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Includes:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Extends:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Generalizes:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Preconditions:</strong></td>
+	  <td colspan="5">Iemand die de app heeft gedownload wil de app gebruiken.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Postconditions:</strong></td>
+	  <td colspan="5">De app is gebruikt.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Notes/Issues:</strong></td>
+	  <td colspan="5">Deze use case is erg uitgebreid, omdat alle input en output van het platform hiermee te maken hebben. 
+		</td>
+	</tr>
+  </table>
+<br/>
+
+<table style="border:1px solid;"> 
+	<tr>
+		<td colspan="4"><strong>Use case name and identifier: </strong>U8: Bijhouden transacties
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Objective:</strong></td>
+	  <td colspan="5">Voor het systeem is het nodig dat transacties worden bijgehouden. Dit houdt in dat saldo’s worden bijgewerkt en de ritten worden bijgehouden. Daarnaast worden sponsorovereenkomsten en advertenties hierin bijgehouden.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td>
+	  <td colspan="5">4: Redelijk belangrijk
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Flow of Events:</strong></td>
+	  <td colspan="5">Elke transactie wordt automatisch bijgehouden door het transactiesysteem, hier hoeft de gebruiker niets voor te doen.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Includes:</strong></td>
+	  <td colspan="5">U1: Maken en gebruiken profiel/ wallet integratie & U6: Gebruik ritsysteem
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Extends:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Generalizes:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Preconditions:</strong></td>
+	  <td colspan="5">Als iemand een transactie wil doen, bijvoorbeeld iemand die een rit neemt, wordt een transactiepagina geladen. Hierna kan de transactie worden uitgevoerd. Dit geldt niet alleen voor ritten, maar ook voor advertenties. 
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Postconditions:</strong></td>
+	  <td colspan="5"> De transactie is opgeslagen in het systeem.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Notes/Issues:</strong></td>
+	  <td colspan="5">Het transactiesysteem is belangrijk, maar zonder het systeem zou het platform wel kunnen functioneren, het is dan echter niet mogelijk om te betalen of geld te ontvangen voor ritten, vandaar de waarde [4] voor Priority. 
+			Deze use case includes U1 en U6 gedeeltelijk, niet alle functionaliteiten komen ook voor in deze use case.
+			</td>
+	</tr>
+  </table>
+<br/>
+
+
+
 <h2>Carpool4Uni application structure with integrated use cases</h2>
 <p>
 	For the diagram we chose a slightly different approach than the usual UML diagram to show a more complete view of the use cases in the application context
