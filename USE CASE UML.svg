@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 841.9 595.3" style="enable-background:new 0 0 841.9 595.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{font-family:'AgencyFB-Bold';}
+	.st1{font-size:28.8076px;}
+	.st2{stroke:#000000;stroke-miterlimit:10;}
+	.st3{font-family:'ArialMT';}
+	.st4{font-size:17.2208px;}
+	.st5{font-size:12.9156px;}
+	.st6{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st7{fill:none;}
+	.st8{fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:4.6184,4.6184;}
+	.st9{font-family:'MyriadPro-Regular';}
+	.st10{font-size:12.5924px;}
+	.st11{fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:5;}
+	.st12{fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:5,5;}
+</style>
+<g id="Layer_1">
+	<text id="XMLID_6_" transform="matrix(1.2242 0 0 1 102.5637 102.8803)" class="st0 st1">ACTOREN</text>
+	<g id="XMLID_3_">
+		<g id="XMLID_4_">
+			<ellipse id="XMLID_5_" class="st2" cx="161.1" cy="158" rx="18.4" ry="17.3"/>
+			<path id="XMLID_14_" class="st2" d="M170.4,219.9h-18.5c-6.6,0-12-5.4-12-12v-27.6c0-6.6,5.4-12,12-12h18.5c6.6,0,12,5.4,12,12
+				v27.6C182.4,214.5,177,219.9,170.4,219.9z"/>
+		</g>
+		<text id="XMLID_15_" transform="matrix(1 0 0 1 125.9562 235.2332)" class="st3 st4">Passagier</text>
+	</g>
+	<g id="XMLID_16_">
+		<g id="XMLID_18_">
+			<ellipse id="XMLID_20_" class="st2" cx="158.3" cy="290.4" rx="18.4" ry="17.3"/>
+			<path id="XMLID_19_" class="st2" d="M167.5,352.3H149c-6.6,0-12-5.4-12-12v-27.6c0-6.6,5.4-12,12-12h18.5c6.6,0,12,5.4,12,12
+				v27.6C179.5,346.9,174.1,352.3,167.5,352.3z"/>
+		</g>
+		<text id="XMLID_17_" transform="matrix(1 0 0 1 123.0724 367.5928)" class="st3 st4">Chauffeur</text>
+	</g>
+	<g id="XMLID_21_">
+		<g id="XMLID_28_">
+			<ellipse id="XMLID_30_" class="st2" cx="158.3" cy="435.7" rx="18.4" ry="17.3"/>
+			<path id="XMLID_29_" class="st2" d="M167.5,497.6H149c-6.6,0-12-5.4-12-12V458c0-6.6,5.4-12,12-12h18.5c6.6,0,12,5.4,12,12v27.6
+				C179.5,492.2,174.1,497.6,167.5,497.6z"/>
+		</g>
+		<text id="XMLID_27_" transform="matrix(1 0 0 1 116.1056 512.9229)" class="st3 st4">Carpool4Uni</text>
+	</g>
+	<text id="XMLID_1_" transform="matrix(1.2242 0 0 1 365.1801 45.4775)" class="st0 st1">USE CASE UML</text>
+</g>
+<g id="Layer_2">
+	<g id="XMLID_171_">
+		<g id="XMLID_173_">
+			<text id="XMLID_174_" transform="matrix(1 0 0 1 617.4866 226.9859)"><tspan x="0" y="0" class="st3 st5">Maken en gebruiken </tspan><tspan x="0" y="15.5" class="st3 st5">van profiel </tspan><tspan x="0" y="31" class="st3 st5">en wallet</tspan></text>
+		</g>
+		<path id="XMLID_172_" class="st6" d="M730.9,267.4h-123c-6.6,0-12-5.4-12-12v-33.8c0-6.6,5.4-12,12-12h123c6.6,0,12,5.4,12,12
+			v33.8C742.9,262,737.5,267.4,730.9,267.4z"/>
+	</g>
+	<g id="XMLID_167_">
+		<g id="XMLID_169_">
+			<text id="XMLID_170_" transform="matrix(1 0 0 1 367.3265 161.3896)"><tspan x="0" y="0" class="st3 st4">Aanvragen </tspan><tspan x="0" y="20.7" class="st3 st4">Rit</tspan></text>
+		</g>
+		<path id="XMLID_168_" class="st6" d="M478,197.3H355c-6.6,0-12-5.4-12-12v-33.8c0-6.6,5.4-12,12-12h123c6.6,0,12,5.4,12,12v33.8
+			C490,191.9,484.6,197.3,478,197.3z"/>
+	</g>
+	<g id="XMLID_163_">
+		<g id="XMLID_165_">
+			<text id="XMLID_166_" transform="matrix(1 0 0 1 372.3342 377.6456)"><tspan x="0" y="0" class="st3 st5">Aanbieden rit en </tspan><tspan x="0" y="15.5" class="st3 st5">goedkeuren  </tspan><tspan x="0" y="31" class="st3 st5">passagier</tspan></text>
+		</g>
+		<path id="XMLID_164_" class="st6" d="M485.7,418.1h-123c-6.6,0-12-5.4-12-12v-33.8c0-6.6,5.4-12,12-12h123c6.6,0,12,5.4,12,12
+			v33.8C497.7,412.7,492.3,418.1,485.7,418.1z"/>
+	</g>
+	<g id="XMLID_159_">
+		<g id="XMLID_161_">
+			<text id="XMLID_162_" transform="matrix(1 0 0 1 612.3879 154.4244)"><tspan x="0" y="0" class="st3 st5">Sturen en ontvangen </tspan><tspan x="0" y="15.5" class="st3 st5">van berichten</tspan></text>
+		</g>
+		<path id="XMLID_160_" class="st6" d="M730.9,190.3h-123c-6.6,0-12-5.4-12-12v-33.8c0-6.6,5.4-12,12-12h123c6.6,0,12,5.4,12,12
+			v33.8C742.9,184.9,737.5,190.3,730.9,190.3z"/>
+	</g>
+	<g id="XMLID_155_">
+		<g id="XMLID_157_">
+			<text id="XMLID_158_" transform="matrix(1 0 0 1 367.3958 271.8064)"><tspan x="0" y="0" class="st3 st4">Gebruiken </tspan><tspan x="0" y="20.7" class="st3 st4">GUI</tspan></text>
+		</g>
+		<path id="XMLID_156_" class="st6" d="M478,307.7H355c-6.6,0-12-5.4-12-12v-33.8c0-6.6,5.4-12,12-12h123c6.6,0,12,5.4,12,12v33.8
+			C490,302.3,484.6,307.7,478,307.7z"/>
+	</g>
+	<g id="XMLID_151_">
+		<g id="XMLID_153_">
+			<text id="XMLID_154_" transform="matrix(1 0 0 1 367.3958 531.1924)"><tspan x="0" y="0" class="st3 st4">Beheren </tspan><tspan x="0" y="20.7" class="st3 st4">back-end</tspan></text>
+		</g>
+		<path id="XMLID_152_" class="st6" d="M478,567.1H355c-6.6,0-12-5.4-12-12v-33.8c0-6.6,5.4-12,12-12h123c6.6,0,12,5.4,12,12v33.8
+			C490,561.7,484.6,567.1,478,567.1z"/>
+	</g>
+	<line id="XMLID_150_" class="st7" x1="233.9" y1="26.2" x2="229.8" y2="24.2"/>
+	<g id="XMLID_146_">
+		<g id="XMLID_148_">
+			<text id="XMLID_149_" transform="matrix(1 0 0 1 623.1429 335.6682)"><tspan x="0" y="0" class="st3 st4">Maken van </tspan><tspan x="0" y="20.7" class="st3 st4">Transacties</tspan></text>
+		</g>
+		<path id="XMLID_147_" class="st6" d="M730.9,367h-123c-6.6,0-12-5.4-12-12v-33.8c0-6.6,5.4-12,12-12h123c6.6,0,12,5.4,12,12V355
+			C742.9,361.6,737.5,367,730.9,367z"/>
+	</g>
+	<line id="XMLID_145_" class="st2" x1="182.4" y1="194.1" x2="343" y2="273.1"/>
+	<line id="XMLID_144_" class="st6" x1="179.5" y1="326.5" x2="343" y2="273.1"/>
+	<line id="XMLID_143_" class="st6" x1="182.4" y1="194.1" x2="343" y2="168.4"/>
+	<g id="XMLID_135_">
+		<g id="XMLID_137_">
+			<line id="XMLID_142_" class="st6" x1="420.1" y1="249.9" x2="420.1" y2="247.4"/>
+			<line id="XMLID_141_" class="st8" x1="420.2" y1="242.7" x2="420.6" y2="208.1"/>
+			<line id="XMLID_140_" class="st6" x1="420.7" y1="205.8" x2="420.7" y2="203.3"/>
+			<g id="XMLID_138_">
+				<path id="XMLID_139_" d="M420.8,197.3c1,2.9,2.8,6.4,4.6,8.6l-4.7-1.8l-4.8,1.7C417.8,203.6,419.7,200.1,420.8,197.3z"/>
+			</g>
+		</g>
+	</g>
+	<text id="XMLID_134_" transform="matrix(1 0 0 1 427.2355 224.6922)" class="st9 st10">Maakt mogelijk</text>
+	<g id="XMLID_126_">
+		<g id="XMLID_128_">
+			<line id="XMLID_133_" class="st6" x1="424.1" y1="307.7" x2="424.1" y2="310.2"/>
+			<line id="XMLID_132_" class="st8" x1="424.1" y1="314.8" x2="424.2" y2="349.4"/>
+			<line id="XMLID_131_" class="st6" x1="424.2" y1="351.7" x2="424.2" y2="354.2"/>
+			<g id="XMLID_129_">
+				<path id="XMLID_130_" d="M424.2,360.3c-1.1-2.8-2.9-6.4-4.8-8.5l4.8,1.7l4.7-1.7C427.1,353.9,425.3,357.4,424.2,360.3z"/>
+			</g>
+		</g>
+	</g>
+	<text id="XMLID_125_" transform="matrix(0.9999 -1.653481e-002 1.653481e-002 0.9999 435.6185 338.1096)" class="st9 st10">Maakt mogelijk</text>
+	<line id="XMLID_124_" class="st2" x1="179.5" y1="326.5" x2="350.7" y2="389.2"/>
+	<line id="XMLID_123_" class="st11" x1="497.7" y1="391.4" x2="562.1" y2="392.2"/>
+	<line id="XMLID_122_" class="st11" x1="562.1" y1="392.2" x2="562.1" y2="165.4"/>
+	<g id="XMLID_116_">
+		<g id="XMLID_118_">
+			<line id="XMLID_121_" class="st12" x1="490" y1="165.4" x2="589.9" y2="165.4"/>
+			<g id="XMLID_119_">
+				<path id="XMLID_120_" d="M595.9,165.4c-2.8,1.1-6.4,2.9-8.5,4.8l1.7-4.8l-1.7-4.8C589.5,162.6,593.1,164.4,595.9,165.4z"/>
+			</g>
+		</g>
+	</g>
+	<text id="XMLID_115_" transform="matrix(1 0 0 1 500.5978 158.0129)" class="st9 st10">Is onderdeel van</text>
+	<g id="XMLID_108_">
+		<line id="XMLID_114_" x1="562.1" y1="238.5" x2="595.9" y2="238.5"/>
+		<g id="XMLID_110_">
+			<line id="XMLID_113_" class="st12" x1="562.1" y1="238.5" x2="589.9" y2="238.5"/>
+			<g id="XMLID_111_">
+				<path id="XMLID_112_" d="M595.9,238.5c-2.8,1.1-6.4,2.9-8.5,4.8l1.7-4.8l-1.7-4.8C589.5,235.7,593.1,237.5,595.9,238.5z"/>
+			</g>
+		</g>
+	</g>
+	<text id="XMLID_107_" transform="matrix(4.489659e-011 -1 1 4.489659e-011 557.5373 326.4924)" class="st9 st10">Is onderdeel van</text>
+	<text id="XMLID_73_" transform="matrix(1 0 0 1 675.6759 295.7792)" class="st9 st10">Is onderdeel van</text>
+	<g id="XMLID_63_">
+		<g id="XMLID_65_">
+			<line id="XMLID_68_" class="st12" x1="673.1" y1="309.2" x2="673.1" y2="273.5"/>
+			<g id="XMLID_66_">
+				<path id="XMLID_67_" d="M673.1,267.4c1.1,2.8,2.9,6.4,4.8,8.5l-4.8-1.7l-4.8,1.7C670.3,273.8,672.1,270.3,673.1,267.4z"/>
+			</g>
+		</g>
+	</g>
+	<line id="XMLID_2_" class="st11" x1="490" y1="538.2" x2="789" y2="538.2"/>
+	<line id="XMLID_7_" class="st11" x1="789" y1="538.2" x2="789" y2="161.4"/>
+	<g id="XMLID_8_">
+		<g id="XMLID_43_">
+			<line id="XMLID_46_" class="st12" x1="789" y1="161.4" x2="748.9" y2="161.4"/>
+			<g id="XMLID_44_">
+				<path id="XMLID_45_" d="M742.9,161.4c2.8-1.1,6.4-2.9,8.5-4.8l-1.7,4.8l1.7,4.8C749.2,164.2,745.7,162.4,742.9,161.4z"/>
+			</g>
+		</g>
+	</g>
+	<g id="XMLID_9_">
+		<g id="XMLID_38_">
+			<line id="XMLID_41_" class="st12" x1="789" y1="238.5" x2="748.9" y2="238.5"/>
+			<g id="XMLID_39_">
+				<path id="XMLID_40_" d="M742.9,238.5c2.8-1.1,6.4-2.9,8.5-4.8l-1.7,4.8l1.7,4.8C749.2,241.4,745.7,239.6,742.9,238.5z"/>
+			</g>
+		</g>
+	</g>
+	<g id="XMLID_10_">
+		<g id="XMLID_33_">
+			<line id="XMLID_36_" class="st12" x1="789" y1="338.1" x2="748.9" y2="338.1"/>
+			<g id="XMLID_34_">
+				<path id="XMLID_35_" d="M742.9,338.1c2.8-1.1,6.4-2.9,8.5-4.8l-1.7,4.8l1.7,4.8C749.2,341,745.7,339.2,742.9,338.1z"/>
+			</g>
+		</g>
+	</g>
+	<text id="XMLID_11_" transform="matrix(1 0 0 1 591.2357 531.1922)" class="st9 st10">Geeft functionaliteit</text>
+</g>
+<g id="Layer_3">
+	<line id="XMLID_92_" class="st7" x1="193.5" y1="40.9" x2="192.8" y2="40.9"/>
+	<line id="XMLID_94_" class="st6" x1="22.9" y1="-2.3" x2="23.6" y2="-2.3"/>
+</g>
+<g id="USE_CASE">
+	<line id="XMLID_60_" class="st2" x1="176.6" y1="467.5" x2="343" y2="538.2"/>
+</g>
+</svg>
