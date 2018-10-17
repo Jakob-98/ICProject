@@ -2,20 +2,81 @@
 	
 <head>
 	<title>Carpool4Uni project</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 		<style>
 				table {
 					width: 1200px;
 				}
+				.button {
+    background-color: rgb(174, 174, 174);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+		font-size: 16px;
+		cursor:pointer;
+}
+		.content {
+			display: none;
+		}
+		#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(106, 104, 104); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+		font-size: 18px; /* Increase font size */
+		opacity:0.5;
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
 		</style>
+		<script>
+		jQuery(document).ready(function(){
+			jQuery('#hideshow').on('click', function(event) {        
+					 jQuery('#content').toggle('show');
+			});
+			jQuery('#hideshow1').on('click', function(event) {        
+					 jQuery('#content1').toggle('show');
+			});
+			jQuery('#hideshow2').on('click', function(event) {        
+					 jQuery('#content2').toggle('show');
+			});
+	});
+
+	window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+	</script>
 </head>
 
 
 
 <body>
-
-
-	
+		<button onclick="topFunction()" id="myBtn" title="Go to top">go to top</button>
 
 	
 	
@@ -68,7 +129,11 @@ Groep #1
     • Carpoolers worden opgehaald op een centrale plek.<br/><br/>
     • De begin-en eindlocatie van de ritten van en naar de technische universiteit Delft dienen te beginnen bij de parkeerplaats van de Aula.
 </p>
+<input class='button' type='button' id='hideshow' value='Nonfunctionele Requirements'>
+<input class='button' type='button' id='hideshow1' value='Functionele Requirements'>
+<input class='button' type='button' id='hideshow2' value='Use cases'>
 
+<div class ='content'id='content'>
 <h2>Nonfunctionele Requirements</h2>
 <table style="border:1px solid;"> 
 	<tr>
@@ -321,7 +386,8 @@ Groep #1
 	  <td colspan="5">...</td>  
 	</tr>
 	</table>
-
+</div>
+<div class ='content'id='content1'>
 <h2>Funtionele Requirements</h2>
 
   <table style="border:1px solid;"> 
@@ -1000,13 +1066,14 @@ Groep #1
 	</tr>
   </table>
 <br/>
-
+</div>
 
 
 
 <!-- USE CASES -->
 
 
+<div class ='content'id='content2'>
 
 <h2>Use Cases</h2>
 
@@ -1426,7 +1493,7 @@ Groep #1
 		</tr>
 		</table>
 	<br/>
-
+</div>
 
 
 <h2>Carpool4Uni use case UML</h2>
