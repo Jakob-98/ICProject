@@ -1,0 +1,1489 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html>
+	
+<head>
+	<title>Carpool4Uni project</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="main.js"></script>
+	<link rel="stylesheet" type="text/css" href="styling.css">.
+
+</head>
+
+
+
+<body>
+	
+<button onclick="topFunction()" id="myBtn" title="Go to top">go to top</button>
+<img src="https://i.imgur.com/gD7gWaJ.png" style="position:absolute;top:0;right:0;" width="200" height="300" alt=""/> 
+
+
+<h1>Requirements Specificatie</h1>
+<h2>Groep Info</h2>
+Groep #1 
+<ul>
+	<li>Dani van de Pol (4678834)</li>
+	<li>Niels Den Ouden(1379100)</li>
+	<li>Mennolt Verhaar (4674685)</li>
+	<li>Jakob Serlier (4594924)</li>
+</ul>
+
+<h2>Index</h2>
+<ul>
+		<li><a href="#Elicitatieproces">Elicitatieproces</a><br></li>
+		<li><a href="#Inleiding">Inleiding</a><br></li>
+		<li><a href="#Project issues">Project issuess</a><br></li>
+		<li><a href="#Randvoorwaarden">Randvoorwaarden</a><br></li>
+		<li><a href="#buttons">Nonfunctionele, functionele requirements en use cases</a><br></li>
+		<li><a href="#use_case_uml">Use case diagram</a><br></li>
+		<li><a href="#application_structure">Application structure diagram</a><br></li>
+		<li><a href="#interface">Interactive interface design prototype</a><br></li>
+		<li><a href="#linkinterface">Link between interface design and Use Cases/Requirements</a><br></li>
+</ul>
+
+<h2 id="Elicitatieproces">Elicitatieproces</h2>
+<p> 
+		Voorafgaand aan het interview is er een lijst met vragen opgesteld om het interview soepeler te laten verlopen. Tijdens het gesprek zijn de antwoorden op de vragen in het interview-document gezet. Hierdoor is er een bijlage te vinden, met de notulen van het hele gesprek.<br/><br/>
+
+		Tijdens het interview is eerst de chauffeur ge&#239;nterviewd, vervolgens de carpooler en tot slot is de directie van de organisatie ge&#239;nterviewd. Door het interview zo te laten verlopen hebben wij een betere blik kunnen krijgen op de benodigde functies van de app.<br/><br/>
+		
+		Na voltooiing van de uitwerking van het interview, is het document opgestuurd naar de directie van Carpool4Uni. De directie heeft dit document bekeken, en enkele aanvullingen teruggestuurd. Deze aanvullingen zijn onderin het interview document toegevoegd. <br/><br/>
+		
+		De requirements zijn daarna uit het document gehaald, en zijn verwerkt in de definitieve lijst met requirements. <br/><br/>
+</p>
+
+<h2 id="Inleiding">Inleiding</h2>
+<p>
+		Het te ontwikkelen systeem zorgt ervoor dat chauffeurs die van of naar een universiteit reizen, een stoel aan kunnen bieden aan een medewerker of student aan de universiteit. Hierdoor is het in de auto gezelliger, kunnen mensen sneller op hun bestemming komen, maar belangrijker nog: er kunnen kosten bespaard worden voor de chauffeur. <br/><br/>
+
+		Carpoolers en chauffeurs hebben accounts in de app. Elke account bezit een persoonlijke wallet. Carpoolers kunnen dit saldo opwaarderen, waarna ze kunnen reizen. De chauffeur bepaalt uiteindelijk de prijs (binnen een range). Carpoolers zien in de app een lijst met beschikbare ophaalplaatsen, over het algemeen zijn dit parkeerplaatsen, vanaf waar ze kunnen reizen. Hierbij kunnen de klanten informatie bekijken over de auto. Met deze gegevens kan elke klant voor een chauffeur kiezen.<br/><br/>
+		
+		Het doel van dit systeem is dat klanten en chauffeurs eenvoudig aan elkaar gekoppeld kunnen worden. Hierdoor wordt vervoer van en naar de universiteit toegankelijker. 
+
+</p>
+
+<h2 id="Project issues">Project Issues</h2>
+<p>
+		Uit gesprekken met de klant zijn de onderstaande project issues gekomen. Verder zal #1 DevDelft alle mogelijke resources gebruiken om de app zo goed mogelijk te ontwikkelen. <br/><br/>
+    • Het platform dient uiterlijk 8 november 2018 werkzaam te zijn.<br/><br/>
+    • Er is een offerte uitgebracht om dit project te ontwikkelen voor een budget van 32.000 euro.<br/><br/>
+    • De klant wil op de hoogte blijven tijdens het ontwikkelproces van de app.
+</p>
+
+<h2 id="Randvoorwaarden">Randvoorwaarden</h2>
+<p>
+		• Het platform moet beschikbaar zijn via een website.<br/><br/>
+		• Chauffeurs en rijders hebben een aparte app, volgens het UBER model.<br/><br/>
+    • Carpoolers worden opgehaald op een centrale plek.<br/><br/>
+    • De begin-en eindlocatie van de ritten van en naar de technische universiteit Delft dienen te beginnen bij de parkeerplaats van de Aula.
+</p>
+
+<h2 id="buttons">Nonfunctionele, functionele requirements en use cases</h2>
+<input class='button' type='button' id='hideshow' value='Nonfunctionele Requirements'>
+<input class='button' type='button' id='hideshow1' value='Functionele Requirements'>
+<input class='button' type='button' id='hideshow2' value='Use cases'>
+
+<div class ='content'id='content'>
+<h2>Nonfunctionele Requirements</h2>
+<table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>1</td> 
+	  <td><strong>Requirement type:</strong></td><td>NF</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Het profiel van klanten moet een foto, voornaam, achternaam, rating en baan/studie bevatten. Chauffeurs moeten in hun eigen app dezelfde gegevens invoeren, maar daarnaast moeten ze ook het type auto invoeren.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Het profiel zorgt ervoor dat er een betere match kan ontstaan tussen de chauffeur en de klanten die meerijden. </td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Oosters, Tommy</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hier wordt aan voldaan als er een volledig profiel is waarop alle gegevens uit de beschrijving te zien zijn.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">4</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">4</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">4</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>2</td> 
+	  <td><strong>Requirement type:</strong></td><td>NF</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Voordat de rit wordt aangevraagd moeten de ritinformatie en de gegevens van de chauffeur duidelijk zijn voor de klant.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Zo weet de klant waar hij of zei aan toe is en of diegene uberhaupt van deze rit gebruik wil maken. </td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Oosters, Tommy</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">In het ritoverzicht moet voor elke rit duidelijk zijn vanaf waar de rit vertrekt, welke route er gereden wordt en hoelaat de rit vertrekt. Daarnaast dient het profiel van de chauffeur met zijn/haar informatie beschikbaar te zijn voor klant.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">5</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">5</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">5</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>3</td> 
+	  <td><strong>Requirement type:</strong></td><td>NF</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Chauffeurs &#233;n klanten moeten de optie hebben om hun achternaam te verhullen waarna alleen hun voornaam zichtbaar blijft voor anderen.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">De optie voorkomt privacyinbreuk (bijvoorbeeld aan adres aan iemand te koppelen).</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Aan dit criteria wordt voldaan als de app over een instelling beschikt die achternaam tonen aan of uit zet.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">2</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">2</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">2</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">#1 (achternaam op profiel zichtbaar)</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>4</td> 
+	  <td><strong>Requirement type:</strong></td><td>NF</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Het platform dient over de capaciteit te beschikken om minimaal duizend gebruikers per dag aan te kunnen.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">De capaciteit voorkomt dat gebruikers niet van het platform gebruik kunnen maken.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Aan dit criteria wordt voldaan als de capaciteit van het systeem toereikend is om duizend gebruikers per dag af te kunnen handelen.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">2</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">2</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">2</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>5</td> 
+	  <td><strong>Requirement type:</strong></td><td>NF</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Chauffeurs kunnen de vergoeding van een rit instellen van een minimum (n.t.b.) tot een maximum (n.t.b) bedrag.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Het platform kan geen servicefee van de rit vergoeding inhouden als deze te laag is.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Aan dit criteria wordt voldaan als de chauffeur de ritprijs van 1 euro tot 40 euro kan varieren.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">2</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">1</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">1</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>6</td> 
+	  <td><strong>Requirement type:</strong></td><td>NF</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Het platform houdt automatisch bij hoe vaak een chauffeur of klant te laat komt of niet komt opdagen. De eventuele sancties zijn later te bepalen.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Zo wordt duidelijk welke gebruikers op het platform onbetrouwbaar zijn.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Aan dit criteria wordt voldaan als het systeem bijhoudt hoe vaak iemand gerapporteerd wordt vanwege niet op komen dagen.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">3</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">1</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">3</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	</table>
+	<a href="#buttons">terug naar functionele, nonfunctionele requirements en use cases</a>
+</div>
+
+
+
+<!-- functionele requirements -->
+
+
+<div class ='content'id='content1'>
+<h2>Funtionele Requirements</h2>
+
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>7</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Klanten moeten de chauffeur kunnen kiezen, niet andersom.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Carpoolers moeten kunnen selecteren met wie zij willen meerijden.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hieraan wordt voldaan als carpoolers ritten kunnen uitzoeken ipv andersom.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">5</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">5</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">5</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>8</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Er moet een beoordelingssysteem in komen.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Met een beoordelingssysteem kunnen carpoolers en chauffeurs betere keuzes maken.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hieraan wordt voldaan als carpoolers en chauffeurs na het maken van een rit elkaar kunnen beoordelen.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">3</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">4</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">3</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>9</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Het contact moet via de applicatie verlopen in de vorm van berichten.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">In de applicatie moeten chauffeurs en carpoolers berichten kunnen uitwisselen om zo vragen te kunnen stellen.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hieraan wordt voldaan als chauffeurs en carpoolers berichten kunnen uitwisselen via de applicatie.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">4</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">5</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">4</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>10</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Aanwezigheid van een noodknop voor chauffeurs en carpoolers in geval van nood tijdens een rit. </td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Als er bij de rit echt iets aan de hand was moeten zowel chauffeurs als carpoolers dit kunnen rapporteren. Hierbij wordt dan de actuele locatie doorgegeven, net als informatie van de profielen van zowel de klant als de chauffeur.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hieraan wordt voldaan als er een mogelijkheid is tot het rapporteren van onregelmatigheden gedurende een rit.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">4</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">3</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">2</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>11</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Na aanvraag van het meerijden van een carpooler moet de chauffeur deze aanvraag goedkeuren.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Pas als een chauffeur de ritaanvraag goedkeurt komt de transactie tot stand.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hieraan wordt voldaan als een rit pas tot stand komt na acceptatie van de chauffeur.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">4</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">2</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">3</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>12</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Bij het kiezen van de chauffeur moet zijn of haar profiel zichtbaar zijn voor de carpooler.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Om een goede selectie voor de carpooler mogelijk te maken moeten zij eerst het profiel kunnen zien van de chauffeur.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hieraan wordt voldaan als carpoolers de profielen van chauffeurs kunnen bekijken voordat ze een rit maken.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">4</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">3</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">4</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>13</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Nieuwe klanten moeten hun account via hun telefoonnummer verifi&#235;ren.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Om fraude en nep accounts te voorkomen moeten accounts geverifeerd worden per sms.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hieraan wordt voldaan als mensen pas toegang krijgen nadat hun telefoonnummer is geverifeerd.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">3</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">2</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">3</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+ 
+
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>14</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Er dient een plek te zijn voor advertenties en sponsoren in de applicatie</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Er moet beschikbare ruimte in de applicatie zijn voor logos en advertenties.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hieraan wordt voldaan als er in de applicatie ruimte is voor extra elementen.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">2</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">1</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">1</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>15</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Aan een profiel is een saldo gekoppeld</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Zowel carpoolers als chauffeurs hebben een saldo in de applicatie om te verdienen of om ritten mee te betalen.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hieraan wordt voldaan als elk profiel een saldo in de applicatie heeft.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">5</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">5</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">5</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>16</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Voor aanvang van een rit wordt een vast tarief vastgesteld, bij het inschrijven van een rit door een carpooler wordt het vastgestelde tarief al van zijn saldo afgehaald.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Het bedrag wat de rit gaat kosten moet direct in rekening worden gebracht bij de carpooler.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hieraan wordt voldaan als na het tot stand komen van een rit de prijs hiervoor van het saldo van de carpooler wordt afgehaald.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">4</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">4</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">4</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>17</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Na het voltooien van een rit wordt de rit vergoeding bij het saldo van de chauffeur opgeteld. Zowel de chauffeur als de klant moeten de rit bevestigen.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Na een rit dient deze uitbetaald te worden op het account van de chauffeur.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hieraan wordt voldaan als na het aangeven dat de rit is voltooid het bedrag bij de chauffeur wordt bijgeschreven.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">5</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">5</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">5</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>18</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Gegevens moeten worden opgeslagen in een SQL database. </td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Er dient gekozen te worden voor een centrale database als gegevensopslag.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Als de gegevens die de applicatie gebruikt worden opgeslagen in een (centrale) database.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">5</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">5</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">5</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>19</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">De betalingsmogelijkheden, om het saldo op te waarderen, bestaan uit IDeal, PayPal en via een bankoverschrijving.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Dit zijn diverse betaalopties om het saldo in de app te verhogen voor de carpoolers.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hieraan wordt voldaan als het saldo op te waarderen is met de betreffende betaalopties.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">4</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">5</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">4</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>20</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Als de carpooler niet komt opdagen is hij zijn geld kwijt.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Mensen die een rit regelen via de app maar niet meerijden zijn hun geld kwijt.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hieraan wordt voldaan als een chauffeur wel de rit wil uitvoeren maar de carpooler niet komt opdagen en hij toch automatisch betaald krijgt.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">3</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">1</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">1</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>21</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Als de chauffeur niet komt opdagen krijgen de carpoolers hun geld terug.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">Op deze manier worden carpoolers niet benadeeld.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint; Kool, Floris</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hieraan wordt voldaan als de carpooler automatisch zijn geld terug krijgt zodra de rit niet uitgevoerd is.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">3</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">1</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">1</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	</table>
+
+
+<br/>
+  <table style="border:1px solid;"> 
+	<tr>
+	  <td><strong>Requirement #:</strong></td><td>22</td> 
+	  <td><strong>Requirement type:</strong></td><td>F</td> 
+	  <td><strong>Event/Use Case #:</strong></td><td></td> 
+	</tr>
+	<tr>
+	  <td><strong>Description:</strong></td>
+	  <td colspan="5">Klanten en chauffeurs kunnen ten alle tijden een overzicht van de ritten zien.</td>
+	</tr>
+	<tr>
+	  <td><strong>Rationale:</strong></td>
+	  <td colspan="5">In het ritoverzicht staan de toekomstige en huidige ritten, net als de ritten die in het verleden plaats hebben gevonden.</td>
+	</tr>
+	<tr>
+	  <td><strong>Originator:</strong></td>
+	  <td colspan="5">Sullock Enzlin, Quint</td>
+	</tr>
+	<tr>
+	  <td><strong>Fit Criterion:</strong></td>
+	  <td colspan="5">Hieraan wordt voldaan als alle ritten, bevestigd of niet, te zien zijn op een chronologische volgorde.</td>
+	</tr>
+	<tr>
+	  <td><strong>Customer Satisfaction:</strong></td><td colspan="2">3</td> 
+	  <td><strong>Customer Dissatisfaction:</strong></td><td colspan="2">3</td> 
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td><td colspan="2">3</td>  
+	  <td><strong>Conflicts:</strong></td><td colspan="2">...</td> 
+	</tr>
+	
+	
+	<tr>
+	  <td><strong>Supporting Materials:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+	<tr>
+	  <td><strong>History:</strong></td>
+	  <td colspan="5">...</td>  
+	</tr>
+  </table>
+<br/>
+<a href="#buttons">terug naar functionele, nonfunctionele requirements en use cases</a>
+</div>
+
+
+
+<!-- USE CASES -->
+
+
+<div class ='content'id='content2'>
+
+<h2>Use Cases</h2>
+
+<table style="border:1px solid;"> 
+	<tr>
+		<td colspan="4"><strong>Use case name and identifier: </strong>U1: Maken en gebruiken profiel/ wallet integratie
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Objective:</strong></td>
+	  <td colspan="5">Chauffeurs en reizigers hebben een profiel nodig om ritten aan te kunnen bieden respectievelijk te zoeken. Daarnaast dient dit profiel over een wallet te beschikken om transacties te kunnen verwerken.</td>
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td>
+	  <td colspan="5">5. Erg belangrijk</td>
+	</tr>
+	<tr>
+	  <td><strong>Flow of Events:</strong></td>
+	  <td colspan="5"> 1. Als een persoon niet ingelogd is, kan hij of zij inloggen of een account aanmaken. Inloggen kan met het e-mailadres en wachtwoord. 
+			2. Een account kan aangemaakt worden met de benodigde gegevens, dit zijn de volgende gegevens: E-mailadres, huisadres, universiteit, wachtwoord, naam en foto. Een nieuwe gebruiker moet zijn identiteit bevestigen door de inschrijfmail te bevesting.
+			3. De gebruiker komt nu op het thuisscherm waarmee hij alle functies van de app kan bereiken.
+			
+		 </td>
+	</tr>
+	<tr>
+	  <td><strong>Includes:</strong></td>
+	  <td colspan="5">N.v.t.</td>
+	</tr>
+	<tr>
+	  <td><strong>Extends:</strong></td>
+	  <td colspan="5">N.v.t.</td>
+	</tr>
+	<tr>
+	  <td><strong>Generalizes:</strong></td>
+	  <td colspan="5">N.v.t.</td>
+	</tr>
+	<tr>
+	  <td><strong>Preconditions:</strong></td>
+	  <td colspan="5">De gebruiker bezoekt het platform.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Postconditions:</strong></td>
+	  <td colspan="5">De gebruiker beschikt over een persoonlijk account met een functionele wallet.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Notes/Issues:</strong></td>
+	  <td colspan="5">Alleen van toepassing bij het eerste bezoek aan het platform of als de app wordt opgestart zonder ingelogd account. App is onbruikbaar zonder profiel.</td>
+	</tr>
+  </table>
+<br/>
+
+<table style="border:1px solid;"> 
+	<tr>
+		<td colspan="4"><strong>Use case name and identifier: </strong>U2: Sturen berichten</td>
+	</tr>
+	<tr>
+	  <td><strong>Objective:</strong></td>
+	  <td colspan="5">Om contact tussen de chauffeur en een reiziger mogelijk te maken, wordt er gewerkt met een berichtendienst, deze is geïntegreerd in de app. Het is alleen mogelijk om berichten uit te wisselen met iemand waarmee je een rit hebt.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td>
+	  <td colspan="5"> 2: Relatief onbelangrijk
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Flow of Events:</strong></td>
+	  <td colspan="5"> De persoon die contact op wilt nemen opent via het menu het berichtenscherm, waar de andere persoon staat. Het is ook mogelijk om via het profiel contact op te nemen met iemand. Hiermee kan contact op worden genomen. 
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Includes:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Extends:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Generalizes:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Preconditions:</strong></td>
+	  <td colspan="5">Een persoon wilt contact opnemen met een ander persoon.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Postconditions:</strong></td>
+	  <td colspan="5">De personen kunnen berichten naar elkaar versturen, dit houdt op als iemand niet meer bericht vanzelfsprekend. 
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Notes/Issues:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+  </table>
+<br/>
+
+<table style="border:1px solid;"> 
+	<tr>
+		<td colspan="4"><strong>Use case name and identifier: </strong>U3: Aanvraag rit
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Objective:</strong></td>
+	  <td colspan="5">Een carpooler kan beschikbare en (nuttige) ritten aanvragen.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td>
+	  <td colspan="5"> 5. Erg belangrijk
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Flow of Events:</strong></td>
+	  <td colspan="5"> 1. Een klant zoekt naar beschikbare ritten met grofweg dezelfde begin- en eindlocatie, met een bepaalde datum.
+			2. Uit de ingevoerde gegevens komt een lijst met mogelijke ritten. De carpooler kan hier doorheen scrollen. 
+			3. De klant vraagt de rit aan en wacht op een reactie.</td>
+	</tr>
+	<tr>
+	  <td><strong>Includes:</strong></td>
+	  <td colspan="5">U4: Aanbieden rit en goedkeuren passagier en U6: Gebruik ritsysteem.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Extends:</strong></td>
+	  <td colspan="5">N.v.t.</td>
+	</tr>
+	<tr>
+	  <td><strong>Generalizes:</strong></td>
+	  <td colspan="5">N.v.t.</td>
+	</tr>
+	<tr>
+	  <td><strong>Preconditions:</strong></td>
+	  <td colspan="5">De klant zoekt naar een rit als vervoersmiddel.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Postconditions:</strong></td>
+	  <td colspan="5">De klant heeft een rit aangevraagd en krijgt later reactie van de chauffeur.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Notes/Issues:</strong></td>
+	  <td colspan="5">Maakt in lichte mate gebruik van U4 en in grotere mate van U6.
+		</td>
+	</tr>
+  </table>
+<br/>
+
+<table style="border:1px solid;"> 
+	<tr>
+		<td colspan="4"><strong>Use case name and identifier: </strong>U4: Aanbieden rit en goedkeuren passagier</td>
+	</tr>
+	<tr>
+	  <td><strong>Objective:</strong></td>
+	  <td colspan="5">Een chauffeur kan zijn/haar ritten op het platform aanbieden en eventuele carpoolers accepteren</td>
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td>
+	  <td colspan="5">5. Erg belangrijk
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Flow of Events:</strong></td>
+	  <td colspan="5">1. Een chauffeur voert zijn/haar ritten in op het platform.
+			2. De chauffeur ontvangt verzoeken van mensen die willen meerijden.
+			3. De chauffeur kan de verzoeken accepteren of weigeren.
+			</td>
+	</tr>
+	<tr>
+	  <td><strong>Includes:</strong></td>
+	  <td colspan="5">U3: Aanvraag rit en U6: Gebruik ritsysteem.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Extends:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Generalizes:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Preconditions:</strong></td>
+	  <td colspan="5">Een chauffeur heeft plek over voor carpoolers gedurende de rit en wil die plekken opvullen.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Postconditions:</strong></td>
+	  <td colspan="5">Een chauffeur krijgt verzoeken van carpoolers binnen en kan die goedkeuren of weigeren.</td>
+	</tr>
+	<tr>
+	  <td><strong>Notes/Issues:</strong></td>
+	  <td colspan="5">Voor het goedkeuren of weigeren kan eventueel contact worden gelegd via de berichtendienst (U2).
+		</td>
+	</tr>
+  </table>
+<br/>
+
+<table style="border:1px solid;"> 
+	<tr>
+		<td colspan="4"><strong>Use case name and identifier: </strong>U5: Ratingsysteem
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Objective:</strong></td>
+	  <td colspan="5">Chauffeurs en carpoolers kunnen elkaar waarderingen geven op het platform na een uitgevoerde rit.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td>
+	  <td colspan="5"> 2. Relatief onbelangrijk
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Flow of Events:</strong></td>
+	  <td colspan="5">- Een gebruiker krijgt na de rit het verzoek om te beoordelen.
+			- De gebruiker beoordeelt de rit en verstuurt de beoordeling (ook wel rating).
+			- De rating wordt opgeslagen in het systeem en kenbaar gemaakt aan andere gebruikers.
+			</td>
+	</tr>
+	<tr>
+	  <td><strong>Includes:</strong></td>
+	  <td colspan="5">U6: Gebruik ritsysteem
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Extends:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Generalizes:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Preconditions:</strong></td>
+	  <td colspan="5">De gebruikers van het platform willen een rit beoordelen, dit kan de chauffeur maar ook de carpooler zijn.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Postconditions:</strong></td>
+	  <td colspan="5">Een persoon heeft een beoordeling achtergelaten.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Notes/Issues:</strong></td>
+	  <td colspan="5"> Belangrijk is dat het ritsysteem goed werkt (U6) om te voorkomen dat gebruikers elkaar zomaar kunnen beoordelen.
+		</td>
+	</tr>
+  </table>
+<br/>
+
+<table style="border:1px solid;"> 
+	<tr>
+		<td colspan="4"><strong>Use case name and identifier: </strong>U6: Gebruik ritsysteem
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Objective:</strong></td>
+	  <td colspan="5"> Passagiers en chauffeurs kunnen gebruik maken van het ritsysteem om ritten te zoeken en aan te bieden. Zonder het ritsysteem kunnen er geen chauffeurs aan passagiers worden gekoppeld en is de app niet geschikt om te gebruiken.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td>
+	  <td colspan="5"> 5: Erg belangrijk
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Flow of Events:</strong></td>
+	  <td colspan="5"> Een gebruiker is op zoek naar een rit. Daarvoor voert hij of zij enkele zoekcriteria in, waarna er een lijst van mogelijke ritten volgt. De gebruiker kan hieruit een chauffeur kiezen.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Includes:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Extends:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Generalizes:</strong></td>
+	  <td colspan="5">U3: Aanvraag rit en U4: Aanbieden rit en goedkeuren passagier
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Preconditions:</strong></td>
+	  <td colspan="5">De reiziger wil een geschikte rit vinden naar een bepaalde bestemming.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Postconditions:</strong></td>
+	  <td colspan="5">De reiziger heeft een geschikte rit gevonden naar een bepaalde bestemming.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Notes/Issues:</strong></td>
+	  <td colspan="5">U6 is de overkoepelende use case van U3 en U4. U6 is echter van groot belang, want het verbindt twee belangrijke elementen, zodat het platform als het ware ontstaat.</td>
+	</tr>
+  </table>
+<br/>
+
+<table style="border:1px solid;"> 
+	<tr>
+		<td colspan="4"><strong>Use case name and identifier: </strong>U7: Bijhouden transacties
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Objective:</strong></td>
+	  <td colspan="5">Voor het systeem is het nodig dat transacties worden bijgehouden. Dit houdt in dat saldo’s worden bijgewerkt en de ritten worden bijgehouden. Daarnaast worden sponsorovereenkomsten en advertenties hierin bijgehouden. Alle gebruikers kunnen de historie van hun saldo zien, admins kunnen geld van sponsoren en totalen bekijken.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Priority:</strong></td>
+	  <td colspan="5">4: Redelijk belangrijk
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Flow of Events:</strong></td>
+	  <td colspan="5">Elke transactie wordt automatisch bijgehouden door het transactiesysteem, hier hoeft de gebruiker niets voor te doen.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Includes:</strong></td>
+	  <td colspan="5">U1: Maken en gebruiken profiel/ wallet integratie & U6: Gebruik ritsysteem
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Extends:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Generalizes:</strong></td>
+	  <td colspan="5">N.v.t.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Preconditions:</strong></td>
+	  <td colspan="5">Als iemand een transactie wil doen, bijvoorbeeld iemand die een rit neemt, wordt een transactiepagina geladen. Hierna kan de transactie worden uitgevoerd. Dit geldt niet alleen voor ritten, maar ook voor advertenties. 
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Postconditions:</strong></td>
+	  <td colspan="5"> De transactie is opgeslagen in het systeem.
+		</td>
+	</tr>
+	<tr>
+	  <td><strong>Notes/Issues:</strong></td>
+	  <td colspan="5">Het transactiesysteem is belangrijk, maar zonder het systeem zou het platform wel kunnen functioneren, het is dan echter niet mogelijk om te betalen of geld te ontvangen voor ritten, vandaar de waarde [4] voor Priority. 
+			Deze use case includes U1 en U6 gedeeltelijk, niet alle functionaliteiten komen ook voor in deze use case.
+			</td>
+	</tr>
+  </table>
+<br/>
+
+<table style="border:1px solid;"> 
+		<tr>
+			<td colspan="4"><strong>Use case name and identifier: </strong>U8: Aanpassen profiel
+			</td>
+		</tr>
+		<tr>
+			<td><strong>Objective:</strong></td>
+			<td colspan="5">Een persoon wil zijn of haar profiel aanpassen.
+			</td>
+		</tr>
+		<tr>
+			<td><strong>Priority:</strong></td>
+			<td colspan="5"> 4. Relatief belangrijk
+			</td>
+		</tr>
+		<tr>
+			<td><strong>Flow of Events:</strong></td>
+			<td colspan="5"> 1. Een persoon wil aanpassingen maken in zijn of haar gegevens.
+				2. Die persoon gaat naar zijn of haar profiel en drukt op gegevens aanpassen.
+				3. Alle velden, behalve het emailadres, kunnen nu worden aangepast.</td>
+		</tr>
+		<tr>
+			<td><strong>Includes:</strong></td>
+			<td colspan="5">N.v.t.</td>
+		</tr>
+		<tr>
+			<td><strong>Extends:</strong></td>
+			<td colspan="5">U1: Maken en gebruiken profiel/ wallet integratie</td>
+		</tr>
+		<tr>
+			<td><strong>Generalizes:</strong></td>
+			<td colspan="5">N.v.t.</td>
+		</tr>
+		<tr>
+			<td><strong>Preconditions:</strong></td>
+			<td colspan="5">Een passagier of chauffeur wil zijn of haar gegevens aanpassen.
+			</td>
+		</tr>
+		<tr>
+			<td><strong>Postconditions:</strong></td>
+			<td colspan="5">Een persoon heeft zijn of haar actuele gegevens op het profiel staan. 
+			</td>
+		</tr>
+		<tr>
+			<td><strong>Notes/Issues:</strong></td>
+			<td colspan="5">N.v.t.</td>
+		</tr>
+		</table>
+		<a href="#buttons">terug naar functionele, nonfunctionele requirements en use cases</a>
+	<br/>
+</div>
+
+
+<h2 id="use_case_uml">Carpool4Uni use case UML</h2>
+<p>
+Onderstaand vind je het Use Case UML diagram. Voor een totale diagram, staat helemaal onderaan een ander figuur. 
+<br> Als het diagram niet geheel te zien is, dan is hij ook hier te bekijken: <a href="https://svgshare.com/s/8V8">klik hier</a>
+</p>
+<img src="USE CASE UML.svg" width="1200px">
+<h2 id="application_structure">Carpool4Uni application structure with integrated use cases</h2>
+<p>
+	Bij dit diagram hebben we gekozen voor een andere aanpak dan de normale UML manier. Hierdoor geven we een beter beeld van de totale situatie.
+<br> Als het diagram niet geheel te zien is, dan is hij ook hier te bekijken: <a href="https://svgshare.com/s/8P_">klik hier</a>
+</p>
+<img src="UML.svg" width="1200px">
+
+<h2>Interaction and Interface design</h2>
+<h3 id="interface">Interactive interface design prototype</h3>
+<p>
+	Om de opzet van de app weer te geven, hebben wij een tool gebruikt om een werkende basis versie van de app te laten zien. Onderstaand is het prototype van de app te vinden. Het frame is interactief, je kan dus overal op klikken, echter zullen nog niet alle functies werken.
+	<i>Zorg ervoor dat adblock uitstaat om de applicatie te starten.</i>
+</p>
+<script>
+	document.write(unescape("%3Ciframe%20align%3D%22centre%22%20width%3D%22375%22%20height%3D%22667%22%20src%3D%22https%3A//xd.adobe.com/embed/31e5ca6c-56e3-4f66-4701-6c82821a1729-47d4/%3Fhints%3Doff%22%20frameborder%3D%221%22%20allowfullscreen%3E%3C/iframe%3E%0A"));
+</script>
+
+<script type="text/javascript" src="/d2l/common/math/MathML.js?v=10.8.4.12536-31 "></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() { D2LMathML.DesktopInit('https://s.brightspace.com/lib/mathjax/2.6.1/MathJax.js?config=MML_HTMLorMML','https://s.brightspace.com/lib/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML'); });</script></body></html>
+
+<h3 id="linkinterface">Link between interface design and Use Cases/ Requirements</h3>
+<p>
+    • <i>Use Case 1: Maken en gebruiken profiel/ wallet integratie en Use Case 8: Aanpassen profiel</i> zijn te zien op het inlogscherm en het inlogscherm. Op het inlogscherm is het mogelijk om een account aan te maken, of om in te loggen met een al bestaand account. Een bestaand profiel kan worden aangepast door middel van de menu optie Profiel. Al deze functies komen uit Use Cases 1 en 8. <br/><br/>
+    • <i>Use Case 2: Sturen berichten</i> kan eenvoudig worden uitgevoerd. Hiervoor is de menu optie Berichten toegevoegd, hierbij kunnen er chauffeurs van bevestigde ritten gecontracteerd worden.<br/><br/>
+    • <i>Use Case 3: Aanvraag rit</i> is geimplementeerd. Via het thuisscherm van de app kunnen er locaties worden ingevoerd. Hierna kan er gezocht worden naar ritten, welke onder de zoekopdracht worden weergegeven. Als er op een rit geklikt wordt, komt er meer informatie naar voren, daar kan ook de rit worden aangevraagd.
+    De rit komt dan in het menu met bevestigde ritten te staan. Hier staan tevens ook de ritten uit het verleden. Chauffeurs kunnen hun rit aanbiede via een andere app, in deze app is <i>Use Case 4: Aanbieden rit en goedkeuren passagier</i> geimplementeerd. <i>Use Case 6: Gebruik ritsysteem</i> is hier ook van toepassing. <br/><br/>
+    • <i>Use Case 5: Ratingsysteem</i> is geimplementeerd in de app. Het zelf geven van recenties is echter niet te zien, omdat er nog geen koppeling is tussen chauffeurs en rijders. Gebruikers kunnnen echter wel de beoordeling van chauffeurs zien als ze kiezen. <br/><br/>
+    • <i>Use Case 7: Bijhouden transacties</i> is ook verwerkt in dit prototype. Onder de menu optie Wallet zijn de bedragen van de ritten te bekijken. Ook bij Mijn ritten is te bekijken hoeveel elke rit heeft gekost.
+</p>
