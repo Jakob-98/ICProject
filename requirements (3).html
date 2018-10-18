@@ -42,6 +42,20 @@
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
 }
+a {
+  color: rgb(38, 69, 139);
+  font-family: helvetica;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: black;
+}
+
 		</style>
 		<script>
 		jQuery(document).ready(function(){
@@ -78,7 +92,7 @@ function topFunction() {
 <body>
 		<button onclick="topFunction()" id="myBtn" title="Go to top">go to top</button>
 
-	
+
 	
 	<img src="https://i.imgur.com/gD7gWaJ.png" style="position:absolute;top:0;right:0;" width="200" height="300" alt=""/> 
 
@@ -93,7 +107,20 @@ Groep #1
 	<li>Jakob Serlier (4594924)</li>
 </ul>
 
-<h2>Elicitatieproces</h2>
+<h2>Index</h2>
+<ul>
+		<li><a href="#Elicitatieproces">Elicitatieproces</a><br></li>
+		<li><a href="#Inleiding">Inleiding</a><br></li>
+		<li><a href="#Project issues">Project issuess</a><br></li>
+		<li><a href="#Randvoorwaarden">Randvoorwaarden</a><br></li>
+		<li><a href="#buttons">Nonfunctionele, functionele requirements en use cases</a><br></li>
+		<li><a href="#use_case_uml">Use case diagram</a><br></li>
+		<li><a href="#application_structure">Application structure diagram</a><br></li>
+		<li><a href="#interface">Interactive interface design prototype</a><br></li>
+		<li><a href="#linkinterface">Link between interface design and Use Cases/Requirements</a><br></li>
+</ul>
+
+<h2 id="Elicitatieproces">Elicitatieproces</h2>
 <p> 
 		Voorafgaand aan het interview is er een lijst met vragen opgesteld om het interview soepeler te laten verlopen. Tijdens het gesprek zijn de antwoorden op de vragen in het interview-document gezet. Hierdoor is er een bijlage te vinden, met de notulen van het hele gesprek.<br/><br/>
 
@@ -104,7 +131,7 @@ Groep #1
 		De requirements zijn daarna uit het document gehaald, en zijn verwerkt in de definitieve lijst met requirements. <br/><br/>
 </p>
 
-<h2>Inleiding</h2>
+<h2 id="Inleiding">Inleiding</h2>
 <p>
 		Het te ontwikkelen systeem zorgt ervoor dat chauffeurs die van of naar een universiteit reizen, een stoel aan kunnen bieden aan een medewerker of student aan de universiteit. Hierdoor is het in de auto gezelliger, kunnen mensen sneller op hun bestemming komen, maar belangrijker nog: er kunnen kosten bespaard worden voor de chauffeur. <br/><br/>
 
@@ -114,7 +141,7 @@ Groep #1
 
 </p>
 
-<h2>Project Issues</h2>
+<h2 id="Project issues">Project Issues</h2>
 <p>
 		Uit gesprekken met de klant zijn de onderstaande project issues gekomen. Verder zal #1 DevDelft alle mogelijke resources gebruiken om de app zo goed mogelijk te ontwikkelen. <br/><br/>
     • Het platform dient uiterlijk 8 november 2018 werkzaam te zijn.<br/><br/>
@@ -122,13 +149,15 @@ Groep #1
     • De klant wil op de hoogte blijven tijdens het ontwikkelproces van de app.
 </p>
 
-<h2>Randvoorwaarden</h2>
+<h2 id="Randvoorwaarden">Randvoorwaarden</h2>
 <p>
 		• Het platform moet beschikbaar zijn via een website.<br/><br/>
 		• Chauffeurs en rijders hebben een aparte app, volgens het UBER model.<br/><br/>
     • Carpoolers worden opgehaald op een centrale plek.<br/><br/>
     • De begin-en eindlocatie van de ritten van en naar de technische universiteit Delft dienen te beginnen bij de parkeerplaats van de Aula.
 </p>
+
+<h2 id="buttons">Nonfunctionele, functionele requirements en use cases</h2>
 <input class='button' type='button' id='hideshow' value='Nonfunctionele Requirements'>
 <input class='button' type='button' id='hideshow1' value='Functionele Requirements'>
 <input class='button' type='button' id='hideshow2' value='Use cases'>
@@ -386,7 +415,14 @@ Groep #1
 	  <td colspan="5">...</td>  
 	</tr>
 	</table>
+	<a href="#buttons">terug naar functionele, nonfunctionele requirements en use cases</a>
 </div>
+
+
+
+<!-- functionele requirements -->
+
+
 <div class ='content'id='content1'>
 <h2>Funtionele Requirements</h2>
 
@@ -1066,6 +1102,7 @@ Groep #1
 	</tr>
   </table>
 <br/>
+<a href="#buttons">terug naar functionele, nonfunctionele requirements en use cases</a>
 </div>
 
 
@@ -1492,17 +1529,18 @@ Groep #1
 			<td colspan="5">N.v.t.</td>
 		</tr>
 		</table>
+		<a href="#buttons">terug naar functionele, nonfunctionele requirements en use cases</a>
 	<br/>
 </div>
 
 
-<h2>Carpool4Uni use case UML</h2>
+<h2 id="use_case_uml">Carpool4Uni use case UML</h2>
 <p>
 Onderstaand vind je het Use Case UML diagram. Voor een totale diagram, staat helemaal onderaan een ander figuur. 
 <br> Als het diagram niet geheel te zien is, dan is hij ook hier te bekijken: <a href="https://svgshare.com/s/8V8">klik hier</a>
 </p>
 <img src="USE CASE UML.svg" width="1200px">
-<h2>Carpool4Uni application structure with integrated use cases</h2>
+<h2 id="application_structure">Carpool4Uni application structure with integrated use cases</h2>
 <p>
 	Bij dit diagram hebben we gekozen voor een andere aanpak dan de normale UML manier. Hierdoor geven we een beter beeld van de totale situatie.
 <br> Als het diagram niet geheel te zien is, dan is hij ook hier te bekijken: <a href="https://svgshare.com/s/8P_">klik hier</a>
@@ -1510,7 +1548,7 @@ Onderstaand vind je het Use Case UML diagram. Voor een totale diagram, staat hel
 <img src="UML.svg" width="1200px">
 
 <h2>Interaction and Interface design</h2>
-<h3>Interactive interface design prototype</h3>
+<h3 id="interface">Interactive interface design prototype</h3>
 <p>
 	Om de opzet van de app weer te geven, hebben wij een tool gebruikt om een werkende basis versie van de app te laten zien. Onderstaand is het prototype van de app te vinden. Het frame is interactief, je kan dus overal op klikken, echter zullen nog niet alle functies werken.
 	<i>Zorg ervoor dat adblock uitstaat om de applicatie te starten.</i>
@@ -1521,7 +1559,7 @@ Onderstaand vind je het Use Case UML diagram. Voor een totale diagram, staat hel
 
 <script type="text/javascript" src="/d2l/common/math/MathML.js?v=10.8.4.12536-31 "></script><script type="text/javascript">document.addEventListener('DOMContentLoaded', function() { D2LMathML.DesktopInit('https://s.brightspace.com/lib/mathjax/2.6.1/MathJax.js?config=MML_HTMLorMML','https://s.brightspace.com/lib/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML'); });</script></body></html>
 
-<h3>Link between interface design and Use Cases/ Requirements</h3>
+<h3 id="linkinterface">Link between interface design and Use Cases/ Requirements</h3>
 <p>
     • <i>Use Case 1: Maken en gebruiken profiel/ wallet integratie en Use Case 8: Aanpassen profiel</i> zijn te zien op het inlogscherm en het inlogscherm. Op het inlogscherm is het mogelijk om een account aan te maken, of om in te loggen met een al bestaand account. Een bestaand profiel kan worden aangepast door middel van de menu optie Profiel. Al deze functies komen uit Use Cases 1 en 8. <br/><br/>
     • <i>Use Case 2: Sturen berichten</i> kan eenvoudig worden uitgevoerd. Hiervoor is de menu optie Berichten toegevoegd, hierbij kunnen er chauffeurs van bevestigde ritten gecontracteerd worden.<br/><br/>
