@@ -1,7 +1,7 @@
-			table {
-					width: 1200px;
-				}
-				.button {
+table {
+    width: 1200px;
+}
+.button {
     background-color: rgb(174, 174, 174);
     border: none;
     color: white;
@@ -9,13 +9,13 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-		font-size: 16px;
-		cursor:pointer;
+    font-size: 16px;
+    cursor:pointer;
 }
-		.content {
-			display: none;
-		}
-		#myBtn {
+.content {
+    display: none;
+}
+#myBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
     bottom: 20px; /* Place the button at the bottom of the page */

@@ -1,4 +1,4 @@
-		jQuery(document).ready(function(){
+jQuery(document).ready(function(){
 			jQuery('#hideshow').on('click', function(event) {        
 					 jQuery('#content').toggle('show');
 			});
@@ -10,7 +10,7 @@
 			});
 	});
 
-	window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
