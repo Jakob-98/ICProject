@@ -8,6 +8,9 @@ jQuery(document).ready(function(){
 			jQuery('#hideshow2').on('click', function(event) {        
 					 jQuery('#content2').toggle('show');
 			});
+			jQuery('#hideshow3').on('click', function(event) {        
+				jQuery('#content3').toggle('show');
+	   });
 	});
 
 window.onscroll = function() {scrollFunction()};
