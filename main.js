@@ -10,7 +10,16 @@ jQuery(document).ready(function(){
 			});
 			jQuery('#hideshow3').on('click', function(event) {        
 				jQuery('#content3').toggle('show');
-	   });
+			});
+			jQuery('#hideshow4').on('click', function(event) {        
+			jQuery('#content4').toggle('show');
+			});
+			jQuery('#hideshow5').on('click', function(event) {        
+			jQuery('#content5').toggle('show');
+			});
+			jQuery('#hideshow6').on('click', function(event) {        
+			jQuery('#content6').toggle('show');
+			});
 	});
 
 window.onscroll = function() {scrollFunction()};
