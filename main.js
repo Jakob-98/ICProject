@@ -20,6 +20,9 @@ jQuery(document).ready(function(){
 			jQuery('#hideshow6').on('click', function(event) {        
 			jQuery('#content6').toggle('show');
 			});
+			jQuery('#hideshow7').on('click', function(event) {        
+				jQuery('#content7').toggle('show');
+				});
 	});
 
 window.onscroll = function() {scrollFunction()};
