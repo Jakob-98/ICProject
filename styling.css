@@ -1,6 +1,8 @@
-table {
-    width: 1200px;
-}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+ }
+ 
 .button {
     background-color: rgb(174, 174, 174);
     border: none;
