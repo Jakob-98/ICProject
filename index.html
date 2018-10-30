@@ -2280,7 +2280,445 @@ ALTER TABLE `pma__savedsearches`
 <h2 id="Testing_Plan">Testing plan</h2>
 <h4> Unit testing</h4>
 
+<p>Bij unit testing worden kleine stukjes van broncode getest op hun functionaliteit. In deze paragraaf zullen we 5 (kleine) functies testen door verschillende parameters in te voeren en te kijken wat de respons is van het platform.</p>
 
+<input class='button' type='button' id='hideshow7' value='Unit Testing'>
+<div class='content' id='content7'>
+
+<ol>
+		<li><span style="font-weight: 400;"> Unit test van de method: &ldquo;createMessage(message, dateTime, from, to, requestID);&rdquo;</span></li>
+		</ol>
+		<table>
+		<tbody>
+		<tr>
+		<td>
+		<p><strong>Parameters*</strong></p>
+		</td>
+		<td>
+		<p><strong>Expected return</strong></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">Message=&rdquo;He hallo goedendag!&rdquo;</span></p>
+		<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">To=123</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;Message created&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">Message=&rdquo;Yo maat alles goed?&rdquo;</span></p>
+		<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">To=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=123</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;Message created&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">Message=&rdquo;Ik praat graag in mezelf!&rdquo;</span></p>
+		<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><strong>To=456</strong><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;To and From can&rsquo;t be the same&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">Message=&rdquo;sldskdd&rdquo;</span></p>
+		<p><strong>dateTime=&rdquo;03-04-1726 23:12:59&rdquo;</strong><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">To=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;DateTime invalid&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><strong>Message=&rdquo;&rdquo;</strong></p>
+		<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">To=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Message empty string&rdquo;} </span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">Message=&rdquo;sldskdd&rdquo;</span></p>
+		<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">To=123</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><strong>requestID=&rdquo;&rsquo;</strong></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &lsquo;RequestID is empty&rsquo;} </span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">Message=&rdquo;sldskdd&rdquo;</span></p>
+		<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><strong>To=</strong><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;,&rdquo;To is empty&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><strong>Message= [message.length &gt; 565]</strong></p>
+		<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">To=123</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;,&rdquo;Message too long&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">Message=&rdquo;sldskdd&rdquo;</span></p>
+		<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><strong>To= abc</strong><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;,&rdquo;To is invalid&rdquo;}</span></p>
+		</td>
+		</tr>
+		</tbody>
+		</table>
+		<p><span style="font-weight: 400;">* Message parameters and deviation from regular message</span></p>
+		<p><br /><br /></p>
+		<ol start="2">
+		<li><span style="font-weight: 400;"> Unit test van de method: &ldquo;createRating(rideID, userIDFrom, userIDTo, rating);&rdquo;</span></li>
+		</ol>
+		<p>&nbsp;</p>
+		<p><span style="font-weight: 400;">createRating(); roept aan calculateCarpoolerRating(), deze roept aan editUserInfo();<br>
+			We doen een bottom-up approach van de unit test, waarbij we eerst de editUserInfo() testen en uitkomen bij createRating()<br><br>
+			editUserInfo(userID=userID, userRating=4);</span></p>
+		<table>
+		<tbody>
+		<tr>
+		<td>
+		<p><strong>Parameters*</strong></p>
+		</td>
+		<td>
+		<p><strong>Expected return</strong></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">userID = 123</span></p>
+		<p><span style="font-weight: 400;">userRating = 4</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;Rating updated&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">userID = -3</span></p>
+		<p><span style="font-weight: 400;">userRating = 4</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid userID&rdquo;} </span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">userID = 123</span></p>
+		<p><span style="font-weight: 400;">userRating = 60</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid userRating&rdquo;} </span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">userID = 123</span></p>
+		<p><span style="font-weight: 400;">userRating = Vier</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid userRating&rdquo;} </span></p>
+		</td>
+		</tr>
+		</tbody>
+		</table>
+		<p><span style="font-weight: 400;">* Message parameters and deviation from regular message</span></p>
+		<p>&nbsp;</p>
+		<p><span style="font-weight: 400;">calculateCarpoolerRating(userID)</span></p>
+		<table>
+		<tbody>
+		<tr>
+		<td>
+		<p><strong>Parameters*</strong></p>
+		</td>
+		<td>
+		<p><strong>Expected return</strong></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">userID = 123</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;Rating calculated&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">userID = -1</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid userID&rdquo;} </span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">userID = </span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;UserID is empty/null&rdquo;} </span></p>
+		</td>
+		</tr>
+		</tbody>
+		</table>
+		<p><span style="font-weight: 400;">* Message parameters and deviation from regular message</span></p>
+		<p><br /><br /></p>
+		<p><span style="font-weight: 400;">createRating(rideID, userIDFrom, userIDTo, rating);</span></p>
+		<table>
+		<tbody>
+		<tr>
+		<td>
+		<p><strong>Parameters*</strong></p>
+		</td>
+		<td>
+		<p><strong>Expected return</strong></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">rideID = 123</span></p>
+		<p><span style="font-weight: 400;">userIDFrom = 123</span></p>
+		<p><span style="font-weight: 400;">userIDTo = 124</span></p>
+		<p><span style="font-weight: 400;">rating = 3</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;Rating created&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">rideID = 123</span></p>
+		<p><span style="font-weight: 400;">userIDFrom = -3</span></p>
+		<p><span style="font-weight: 400;">userIDTo = 124</span></p>
+		<p><span style="font-weight: 400;">rating = 3</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid userID&rdquo;} </span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">rideID = 123</span></p>
+		<p><span style="font-weight: 400;">userIDFrom = -3</span></p>
+		<p><span style="font-weight: 400;">userIDTo = 124</span></p>
+		<p><span style="font-weight: 400;">rating = 3</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid userID&rdquo;} </span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">rideID = 123</span></p>
+		<p><span style="font-weight: 400;">userIDFrom = 123</span></p>
+		<p><span style="font-weight: 400;">userIDTo = 123</span></p>
+		<p><span style="font-weight: 400;">rating = 3</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;userIDFrom and userIDTo cannot be identical&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">rideID = 123</span></p>
+		<p><span style="font-weight: 400;">userIDFrom = 123</span></p>
+		<p><span style="font-weight: 400;">userIDTo = 123</span></p>
+		<p><span style="font-weight: 400;">rating = 3.63</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;rating must be an integer between 1 and 5&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">rideID = 123</span></p>
+		<p><span style="font-weight: 400;">userIDFrom = 123</span></p>
+		<p><span style="font-weight: 400;">userIDTo = 123</span></p>
+		<p><span style="font-weight: 400;">rating = </span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;no rating given&rdquo;}</span></p>
+		</td>
+		</tr>
+		</tbody>
+		</table>
+		<p><span style="font-weight: 400;">* Message parameters and deviation from regular message</span></p>
+		<p><br /><br /><br /></p>
+		<ol start="3">
+		<li><span style="font-weight: 400;"> Unit test van de method: createRide(from, to, date, price, carSeats):</span></li>
+		</ol>
+		<p>&nbsp;</p>
+		<table>
+		<tbody>
+		<tr>
+		<td>
+		<p><strong>Parameters*</strong></p>
+		</td>
+		<td>
+		<p><strong>Expected return</strong></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">from &ldquo;universiteit abc&rdquo;</span></p>
+		<p><span style="font-weight: 400;">to &ldquo;1234AB wijkstraat 123&rdquo;</span></p>
+		<p><span style="font-weight: 400;">date = &rdquo;03-04-2019 23:12:59&rdquo;</span></p>
+		<p><span style="font-weight: 400;">price = 5,93</span></p>
+		<p><span style="font-weight: 400;">carSeats = 3</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;Ride created with rideID ...&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">from &ldquo;universiteit abc&rdquo;</span></p>
+		<p><span style="font-weight: 400;">to &ldquo;1234AB wijkstraat 123&rdquo;</span></p>
+		<p><span style="font-weight: 400;">date = &rdquo;03-04-2019 23:12:59&rdquo;</span></p>
+		<p><span style="font-weight: 400;">price = 5,93</span></p>
+		<p><span style="font-weight: 400;">carSeats = -1</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid number of carSeats&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">from &ldquo;universiteit abc&rdquo;</span></p>
+		<p><span style="font-weight: 400;">to &ldquo;1234AB wijkstraat 123&rdquo;</span></p>
+		<p><span style="font-weight: 400;">date = &rdquo;03-04-2019 23:12:59&rdquo;</span></p>
+		<p><span style="font-weight: 400;">price = vijf euro</span></p>
+		<p><span style="font-weight: 400;">carSeats = 3</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid price&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">from &ldquo;universiteit abc&rdquo;</span></p>
+		<p><span style="font-weight: 400;">to &ldquo;&rdquo;</span></p>
+		<p><span style="font-weight: 400;">date = &rdquo;03-04-2019 23:12:59&rdquo;</span></p>
+		<p><span style="font-weight: 400;">price = 5,93</span></p>
+		<p><span style="font-weight: 400;">carSeats = 3</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;No locationTo specified&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">from &ldquo;universiteit abc&rdquo;</span></p>
+		<p><span style="font-weight: 400;">to &ldquo;1234AB wijkstraat 123&rdquo;</span></p>
+		<p><span style="font-weight: 400;">date = &rdquo;2 januari 2019&rdquo;</span></p>
+		<p><span style="font-weight: 400;">price = 5,93</span></p>
+		<p><span style="font-weight: 400;">carSeats = 3</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid date&rdquo;}</span></p>
+		</td>
+		</tr>
+		</tbody>
+		</table>
+		<p><span style="font-weight: 400;">* Message parameters and deviation from regular message</span></p>
+		<p>&nbsp;</p>
+		<ol start="4">
+		<li><span style="font-weight: 400;"> Unit test van getTransactionInfo(transactionID)</span></li>
+		</ol>
+		<table>
+		<tbody>
+		<tr>
+		<td>
+		<p><strong>Parameters*</strong></p>
+		</td>
+		<td>
+		<p><strong>Expected return</strong></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">transactionID = 123</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;TransactionInfo = [...]&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">transactionID = null</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;TransactionID is invalid&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">transactionID </span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;TransactionID is invalid&rdquo;}</span></p>
+		</td>
+		</tr>
+		</tbody>
+		</table>
+		<p><br /><br /></p>
+		<ol start="5">
+		<li><span style="font-weight: 400;"> Unit test van getRideInfo(rideID)</span></li>
+		</ol>
+		<table>
+		<tbody>
+		<tr>
+		<td>
+		<p><strong>Parameters*</strong></p>
+		</td>
+		<td>
+		<p><strong>Expected return</strong></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">rideID = 123</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;Ride Info = [...]&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">rideID = -123</span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;rideID is invalid&rdquo;}</span></p>
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<p><span style="font-weight: 400;">rideID = </span></p>
+		</td>
+		<td>
+		<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;rideID is invalid&rdquo;}</span></p>
+		</td>
+		</tr>
+		</tbody>
+		</table>
+		<p><span style="font-weight: 400;">* Message parameters and deviation from regular message</span></p>
+</div>
 
 <h4> Integration testing</h4>
 
@@ -2303,439 +2741,3 @@ ALTER TABLE `pma__savedsearches`
 	Bij de laatste stap van testen kan er gebruik worden gemaakt van een testgroep. De testgroep is van te voren nog niet bepaald, en kan worden samengesteld uit random studenten of andere mensen, die het programma gratis downloaden en gebruiken, en het gelijk testen. 
 	Als er functionaliteiten nog niet volledig werken, kunnen deze nog worden aangepast, voordat het programma aan het grote publiek wordt gegeven.
 </p>
-
-<h2>Testing</h2>
-<h4>Unit testing</h4>
-<ol>
-	<li><span style="font-weight: 400;"> Unit test van de method: &ldquo;createMessage(message, dateTime, from, to, requestID);&rdquo;</span></li>
-	</ol>
-	<table>
-	<tbody>
-	<tr>
-	<td>
-	<p><strong>Parameters*</strong></p>
-	</td>
-	<td>
-	<p><strong>Expected return</strong></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">Message=&rdquo;He hallo goedendag!&rdquo;</span></p>
-	<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">To=123</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;Message created&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">Message=&rdquo;Yo maat alles goed?&rdquo;</span></p>
-	<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">To=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=123</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;Message created&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">Message=&rdquo;Ik praat graag in mezelf!&rdquo;</span></p>
-	<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><strong>To=456</strong><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;To and From can&rsquo;t be the same&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">Message=&rdquo;sldskdd&rdquo;</span></p>
-	<p><strong>dateTime=&rdquo;03-04-1726 23:12:59&rdquo;</strong><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">To=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;DateTime invalid&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><strong>Message=&rdquo;&rdquo;</strong></p>
-	<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">To=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Message empty string&rdquo;} </span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">Message=&rdquo;sldskdd&rdquo;</span></p>
-	<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">To=123</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><strong>requestID=&rdquo;&rsquo;</strong></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &lsquo;RequestID is empty&rsquo;} </span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">Message=&rdquo;sldskdd&rdquo;</span></p>
-	<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><strong>To=</strong><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;,&rdquo;To is empty&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><strong>Message= [message.length &gt; 565]</strong></p>
-	<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">To=123</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;,&rdquo;Message too long&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">Message=&rdquo;sldskdd&rdquo;</span></p>
-	<p><span style="font-weight: 400;">dateTime=&rdquo;03-04-2019 23:12:59&rdquo;</span><span style="font-weight: 400;"><br /></span><strong>To= abc</strong><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">From=456</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">requestID=85</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;,&rdquo;To is invalid&rdquo;}</span></p>
-	</td>
-	</tr>
-	</tbody>
-	</table>
-	<p><span style="font-weight: 400;">* Message parameters and deviation from regular message</span></p>
-	<p><br /><br /></p>
-	<ol start="2">
-	<li><span style="font-weight: 400;"> Unit test van de method: &ldquo;createRating(rideID, userIDFrom, userIDTo, rating);&rdquo;</span></li>
-	</ol>
-	<p>&nbsp;</p>
-	<p><span style="font-weight: 400;">createRating(); roept aan calculateCarpoolerRating(), deze roept aan editUserInfo();<br>
-		We doen een bottom-up approach van de unit test, waarbij we eerst de editUserInfo() testen en uitkomen bij createRating()<br><br>
-		editUserInfo(userID=userID, userRating=4);</span></p>
-	<table>
-	<tbody>
-	<tr>
-	<td>
-	<p><strong>Parameters*</strong></p>
-	</td>
-	<td>
-	<p><strong>Expected return</strong></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">userID = 123</span></p>
-	<p><span style="font-weight: 400;">userRating = 4</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;Rating updated&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">userID = -3</span></p>
-	<p><span style="font-weight: 400;">userRating = 4</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid userID&rdquo;} </span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">userID = 123</span></p>
-	<p><span style="font-weight: 400;">userRating = 60</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid userRating&rdquo;} </span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">userID = 123</span></p>
-	<p><span style="font-weight: 400;">userRating = Vier</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid userRating&rdquo;} </span></p>
-	</td>
-	</tr>
-	</tbody>
-	</table>
-	<p><span style="font-weight: 400;">* Message parameters and deviation from regular message</span></p>
-	<p>&nbsp;</p>
-	<p><span style="font-weight: 400;">calculateCarpoolerRating(userID)</span></p>
-	<table>
-	<tbody>
-	<tr>
-	<td>
-	<p><strong>Parameters*</strong></p>
-	</td>
-	<td>
-	<p><strong>Expected return</strong></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">userID = 123</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;Rating calculated&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">userID = -1</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid userID&rdquo;} </span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">userID = </span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;UserID is empty/null&rdquo;} </span></p>
-	</td>
-	</tr>
-	</tbody>
-	</table>
-	<p><span style="font-weight: 400;">* Message parameters and deviation from regular message</span></p>
-	<p><br /><br /></p>
-	<p><span style="font-weight: 400;">createRating(rideID, userIDFrom, userIDTo, rating);</span></p>
-	<table>
-	<tbody>
-	<tr>
-	<td>
-	<p><strong>Parameters*</strong></p>
-	</td>
-	<td>
-	<p><strong>Expected return</strong></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">rideID = 123</span></p>
-	<p><span style="font-weight: 400;">userIDFrom = 123</span></p>
-	<p><span style="font-weight: 400;">userIDTo = 124</span></p>
-	<p><span style="font-weight: 400;">rating = 3</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;Rating created&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">rideID = 123</span></p>
-	<p><span style="font-weight: 400;">userIDFrom = -3</span></p>
-	<p><span style="font-weight: 400;">userIDTo = 124</span></p>
-	<p><span style="font-weight: 400;">rating = 3</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid userID&rdquo;} </span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">rideID = 123</span></p>
-	<p><span style="font-weight: 400;">userIDFrom = -3</span></p>
-	<p><span style="font-weight: 400;">userIDTo = 124</span></p>
-	<p><span style="font-weight: 400;">rating = 3</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid userID&rdquo;} </span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">rideID = 123</span></p>
-	<p><span style="font-weight: 400;">userIDFrom = 123</span></p>
-	<p><span style="font-weight: 400;">userIDTo = 123</span></p>
-	<p><span style="font-weight: 400;">rating = 3</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;userIDFrom and userIDTo cannot be identical&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">rideID = 123</span></p>
-	<p><span style="font-weight: 400;">userIDFrom = 123</span></p>
-	<p><span style="font-weight: 400;">userIDTo = 123</span></p>
-	<p><span style="font-weight: 400;">rating = 3.63</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;rating must be an integer between 1 and 5&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">rideID = 123</span></p>
-	<p><span style="font-weight: 400;">userIDFrom = 123</span></p>
-	<p><span style="font-weight: 400;">userIDTo = 123</span></p>
-	<p><span style="font-weight: 400;">rating = </span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;no rating given&rdquo;}</span></p>
-	</td>
-	</tr>
-	</tbody>
-	</table>
-	<p><span style="font-weight: 400;">* Message parameters and deviation from regular message</span></p>
-	<p><br /><br /><br /></p>
-	<ol start="3">
-	<li><span style="font-weight: 400;"> Unit test van de method: createRide(from, to, date, price, carSeats):</span></li>
-	</ol>
-	<p>&nbsp;</p>
-	<table>
-	<tbody>
-	<tr>
-	<td>
-	<p><strong>Parameters*</strong></p>
-	</td>
-	<td>
-	<p><strong>Expected return</strong></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">from &ldquo;universiteit abc&rdquo;</span></p>
-	<p><span style="font-weight: 400;">to &ldquo;1234AB wijkstraat 123&rdquo;</span></p>
-	<p><span style="font-weight: 400;">date = &rdquo;03-04-2019 23:12:59&rdquo;</span></p>
-	<p><span style="font-weight: 400;">price = 5,93</span></p>
-	<p><span style="font-weight: 400;">carSeats = 3</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;Ride created with rideID ...&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">from &ldquo;universiteit abc&rdquo;</span></p>
-	<p><span style="font-weight: 400;">to &ldquo;1234AB wijkstraat 123&rdquo;</span></p>
-	<p><span style="font-weight: 400;">date = &rdquo;03-04-2019 23:12:59&rdquo;</span></p>
-	<p><span style="font-weight: 400;">price = 5,93</span></p>
-	<p><span style="font-weight: 400;">carSeats = -1</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid number of carSeats&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">from &ldquo;universiteit abc&rdquo;</span></p>
-	<p><span style="font-weight: 400;">to &ldquo;1234AB wijkstraat 123&rdquo;</span></p>
-	<p><span style="font-weight: 400;">date = &rdquo;03-04-2019 23:12:59&rdquo;</span></p>
-	<p><span style="font-weight: 400;">price = vijf euro</span></p>
-	<p><span style="font-weight: 400;">carSeats = 3</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid price&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">from &ldquo;universiteit abc&rdquo;</span></p>
-	<p><span style="font-weight: 400;">to &ldquo;&rdquo;</span></p>
-	<p><span style="font-weight: 400;">date = &rdquo;03-04-2019 23:12:59&rdquo;</span></p>
-	<p><span style="font-weight: 400;">price = 5,93</span></p>
-	<p><span style="font-weight: 400;">carSeats = 3</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;No locationTo specified&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">from &ldquo;universiteit abc&rdquo;</span></p>
-	<p><span style="font-weight: 400;">to &ldquo;1234AB wijkstraat 123&rdquo;</span></p>
-	<p><span style="font-weight: 400;">date = &rdquo;2 januari 2019&rdquo;</span></p>
-	<p><span style="font-weight: 400;">price = 5,93</span></p>
-	<p><span style="font-weight: 400;">carSeats = 3</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;Invalid date&rdquo;}</span></p>
-	</td>
-	</tr>
-	</tbody>
-	</table>
-	<p><span style="font-weight: 400;">* Message parameters and deviation from regular message</span></p>
-	<p>&nbsp;</p>
-	<ol start="4">
-	<li><span style="font-weight: 400;"> Unit test van getTransactionInfo(transactionID)</span></li>
-	</ol>
-	<table>
-	<tbody>
-	<tr>
-	<td>
-	<p><strong>Parameters*</strong></p>
-	</td>
-	<td>
-	<p><strong>Expected return</strong></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">transactionID = 123</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;TransactionInfo = [...]&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">transactionID = null</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;TransactionID is invalid&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">transactionID </span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;TransactionID is invalid&rdquo;}</span></p>
-	</td>
-	</tr>
-	</tbody>
-	</table>
-	<p><br /><br /></p>
-	<ol start="5">
-	<li><span style="font-weight: 400;"> Unit test van getRideInfo(rideID)</span></li>
-	</ol>
-	<table>
-	<tbody>
-	<tr>
-	<td>
-	<p><strong>Parameters*</strong></p>
-	</td>
-	<td>
-	<p><strong>Expected return</strong></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">rideID = 123</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;OK&rdquo;, &ldquo;Ride Info = [...]&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">rideID = -123</span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;rideID is invalid&rdquo;}</span></p>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<p><span style="font-weight: 400;">rideID = </span></p>
-	</td>
-	<td>
-	<p><span style="font-weight: 400;">{&ldquo;ERROR&rdquo;, &ldquo;rideID is invalid&rdquo;}</span></p>
-	</td>
-	</tr>
-	</tbody>
-	</table>
-	<p><span style="font-weight: 400;">* Message parameters and deviation from regular message</span></p>
