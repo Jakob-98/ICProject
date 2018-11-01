@@ -1788,13 +1788,13 @@ ALTER TABLE `user`
 
 
 <h2 id="Other_implementation">[Other implementation]</h2>
-<p> volgt later, right?</p>
+<p> To be fulfilled...</p>
 
 
 
 
 <h2 id="Testing_Plan">Testing plan</h2>
-<h4> Unit testing</h4>
+<h3> Unit testing</h3>
 
 <p>Bij unit testing worden gedeeltes van de broncode getest op hun functionaliteit. In deze paragraaf zullen we 5 methodes testen door verschillende parameters in te voeren en te kijken wat de respons is van het platform.</p>
 
@@ -2236,18 +2236,30 @@ ALTER TABLE `user`
 		<p><span style="font-weight: 400;">* Message parameters and deviation from regular message</span></p>
 </div>
 
-<h4> Integration testing</h4>
+<h3> Integration testing</h3>
 
 
 
-<h4> System testing</h4>
+<h3> System testing</h3>
+Bij de system tests wordt het systeem getest op verschillende eigenschappen. In deze paragraaf zal uitgelegd worden hoe het platform op 5 manieren getest kan worden.
+<br><br>
+<b>Load testing</b>: Bij Load Testing wordt er gekeken of de software niet bezwijkt onder zwaar gebruik, zie requirement 4. Wat men wil voorkomen is vanzelfsprekend dat de software de vraag niet aan kan. Dit is toepasbaar op alle onderdelen van het platform. Als voorbeeld nemen we <i>requirement 7: Klanten moeten de chauffeur kunnen kiezen.</i> Hieraan wordt voldaan als een klant een chauffeur kan kiezen. Dit kan getest worden door of veel testers op hetzelfde moment dezelfde handeling uit te laten voeren, of door een virtuele load te creëren. Als het goed is kan de software de vraag goed aan.
+<br><br>
+<b>Usability testing</b>: Bij Usability Testing wordt gekeken of gebruikers alle functies van de app (eenvoudig) kunnen vinden. Dit kan eenvoudig worden getest door een groep testers, die geen verstand van de app hebben, te vragen om bepaalde (random) handelingen uit te voeren. In een optimale situatie kunnen de testers alles zelf eenvoudig vinden. Een voorbeeld zou kunnen zijn dat een tester de noodknop eenvoudig moet vinden. Er wordt een (virtuele) rit geboekt, en de tester moet zo snel mogelijk de noodknop vinden. Als de tester dit binnen een bepaalde tijd kan uitvoeren is de test geslaagd. 
+<br><br>
+<b>Functional testing</b>: Bij functional testing worden testers gevraagd of ze functies missen. Het kan bijvoorbeeld zo zijn dat er functies over het hoofd gezien zijn tijdens het ontwikkelproces. Door een tester in de praktijk gebruik te laten maken van de software, kunnen er eenvoudig missende functies naar voren komen, deze kunnen dan alsnog worden geïmplementeerd. 
+<br><br>
+<b>GUI software testing</b>: Bij GUI (Graphical User Interface) software testing wordt gekeken of de GUI overeenkomt met de vooraf bepaalde specificaties. Dit kan getest worden door een testteam de app te laten vergelijken met (getekende) prototypes of ontwerpen. Bijvoorbeeld <i>requirement 14: Er dient een plek te zijn voor advertenties en sponsoren in de applicatie</i> kan getest worden door testers. 
+Zij kunnen de werkelijkheid vergelijken met vroegere ontwerpen, om te kijken of de advertenties wel op de juiste plek staan. GUI software testing is op veel meer plekken toepasbaar, testers kunnen zelfs kijken of de kleur van de app wel overeenkomt met eerdere ontwerpen of kleurspecificaties.
+<br><br>
+<b>Security testing</b>: Bij Security testing wordt gekeken of informatie van klanten wel veilig wordt opgeslagen in databases. Dit heeft te maken met <i>requirement 18: Gegevens moeten worden opgeslagen in een centrale database.</i> Door beveiligingsexperts in te schakelen kan worden getest of informatie wel veilig wordt opgeslagen. De test is geslaagd als de beveiligingsexpers geen lekken vinden. 
 
 
 
 
 
 
-<h4> Acceptence testing</h4>
+<h3> Acceptence testing</h3>
 <p>Uiteindelijk bepaalt de klant of een app volledig functionerend is naar zijn of haar mening. De klant kijkt of alle functies (goed) geïmplementeerd zijn, 
 	en alle functies naar behoren werken. In de eindfase van de ontwikkeling zal de hele applicatie getest kunnen worden (deployment). De klant kan op eigen tempo door de app heen gaan. <br><br>
 
