@@ -22,7 +22,10 @@ jQuery(document).ready(function(){
 			});
 			jQuery('#hideshow7').on('click', function(event) {        
 				jQuery('#content7').toggle('show');
-				});
+			});
+			jQuery('#hideshow8').on('click', function(event) {        
+			jQuery('#content8').toggle('show');
+			});
 	});
 
 window.onscroll = function() {scrollFunction()};
