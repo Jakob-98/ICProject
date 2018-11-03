@@ -37,6 +37,7 @@ Groep #1
 		<li><a href="#application_structure">Application structure diagram</a><br></li>
 		<li><a href="#interface">Interactive interface design prototype</a><br></li>
 		<li><a href="#linkinterface">Link between interface design and Use Cases/Requirements</a><br></li>
+		<li><a href="#swimlane_diagram">Swimlane diagram</a><br></li>
 		<li><a href="#class_diagram">Class diagram</a><br></li>
 		<li><a href="#database">Database structure</a><br></li>
 		<li><a href="#SQL">SQL Queries</a><br></li>
@@ -1497,6 +1498,14 @@ Onderstaand vind je het Use Case UML diagram. Voor een totale diagram, staat hel
     • <i>Use Case 5: Raten medegebruikers</i> is geimplementeerd in de app. Het zelf geven van recenties is echter niet te zien, omdat er nog geen koppeling is tussen chauffeurs en rijders. Gebruikers kunnnen echter wel de beoordeling van chauffeurs zien als ze kiezen. <br/><br/>
     • <i>Use Case 7: Bijhouden transacties</i> is ook verwerkt in dit prototype. Onder de menu optie Wallet zijn de bedragen van de ritten te bekijken. Ook bij Mijn ritten is te bekijken hoeveel elke rit heeft gekost.
 </p>
+<h2 id="swimlane_diagram">Swimlane diagrams</h2>
+<img src="Swimlane#1.png" width="1200px">
+<img src="Swimlane#3.png" width="1200px">
+<img src="Swimlane#4.png" width="1200px">
+<img src="Swimlane#5.png" width="1200px">
+<img src="Swimlane#8.png" width="1200px">
+
+
 
 <h2 id="class_diagram">Class diagram</h2>
 <p>
@@ -2237,7 +2246,46 @@ ALTER TABLE `user`
 </div>
 
 <h3> Integration testing</h3>
+<p>
+	<b>Intergratietest</b> 
+	We gaan bottom up integratietesten doen van losses modules/methods om zo een betere uitspraak te kunnen doen over de kwaliteit van de software. <br><br>
+	
+	Integratietest #1<br>
+	Het doel: testen of iemand die nog niet geregistreerd is zich kan aanmelden en een welkoms-email krijgt. <br>
+	
+	We gaan de createUser() method aanroepen met de bijbehorende parameters: createUser(userName: “Pietje”, userSurname: “Mossel”, password: “ja”, userEmail: “p.Mossel@zeelandnet.org”, dateOfBirth: “11-09-2001”<br>
+	
+	Als er nu een email verstuurd wordt naar deze email met een confirmatielink is de registratie dus gelukt. <br><br>
+	
+Integratietest #2<br>
+Het doel: het aanmaken van een rating.<br>
 
+We gaan de createRating method aanroepen met de bijbehorende parameters: createRating(rideID: 123, userIDFrom: 213, userIDTo: 321, rating: 5). Deze method roept vervolgens ook calculateCarpoolerRating() aan, en deze roept editUserInfo() aan om zo de rating van de user aan te passen.<br>
+
+Als de rating van de user is aangepast is deze integratietest dus correct verlopen. <br><br>x
+
+Integratietest #3<br>
+Het doel: de vertreklocatie oproepen van een specifieke ride (om bijvoorbeeld een afstand te bepalen)<br>
+
+We gaan de getLocation() method aanroepen met de parameter (RideID: 312).<br>
+
+Als deze method een return geeft van de correcte vertreklocatie van deze rit is deze integratietest correct verlopen. <br><br>
+
+Integratietest #4<br>
+Het doel: de berichten ophalen van een user gekoppeld aan de request voor een rit. <br>
+
+We gaan de getMessages() method van de class messages aanroepen met de parameters: getMessagers(userID: 321, requestID; 123).<br>
+
+Indien dit alle messages van de betreffende user bij deze requestID returned is deze integratietest correct verlopen. <br><br>
+
+Integratietest #5<br>
+Het doel: een user verwijderen. <br>
+
+We gaan deleteUser(userID) aanroepen met de parameters: deleteUser(userID: 321). <br>
+
+Indien dit deze user verwijderd is deze integratietest correct verlopen. Bij een deletion moet goed worden gelet op bijvoorbeeld deletion anomalies in de database of null pointer exceptions in de code. <br>
+
+</p>
 
 
 <h3> System testing</h3>
