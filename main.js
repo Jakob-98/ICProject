@@ -26,6 +26,9 @@ jQuery(document).ready(function(){
 			jQuery('#hideshow8').on('click', function(event) {        
 			jQuery('#content8').toggle('show');
 			});
+			jQuery('#hideshow9').on('click', function(event) {        
+			jQuery('#content9').toggle('show');
+			});
 	});
 
 window.onscroll = function() {scrollFunction()};
