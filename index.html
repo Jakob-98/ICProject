@@ -1809,6 +1809,9 @@ ALTER TABLE `user`
 </div>
 
 <h2 id="SQL">SQL Queries</h2>
+
+<input class='button' type='button' id='hideshow10' value='Queries'>
+<div class='content' id='content10'>
 <p> Om een nieuwe universiteit toe te voegen in de applicatie wordt onderstaande query gebruikt. </p>
 
 <pre style='color:#000000;background:#ffffff;'><span style='color:#000000; font-weight:bold; '>Query 1: </span><span style='color:#800000; font-weight:bold; '>INSERT</span> <span style='color:#800000; font-weight:bold; '>INTO</span> <span style='color:#800000; '>`</span><span style='color:#000000; background:#ffffff; '>university</span><span style='color:#800000; '>`</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>`</span><span style='color:#000000; background:#ffffff; '>universityID</span><span style='color:#800000; '>`</span><span style='color:#800080; '>,</span> <span style='color:#800000; '>`</span><span style='color:#000000; background:#ffffff; '>universityName</span><span style='color:#800000; '>`</span><span style='color:#808030; '>)</span> <span style='color:#800000; font-weight:bold; '>VALUES</span> <span style='color:#808030; '>(</span><span style='color:#808030; '>NULL</span><span style='color:#800080; '>,</span> <span style='color:#0000e6; '>'TU Eindhoven'</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
@@ -1921,7 +1924,7 @@ Onderstaande query is voor ritten van de universiteit naar huis. </p>
 <pre style='color:#000000;background:#ffffff;'><span style='color:#000000; font-weight:bold; '>Query 19: </span><span style='color:#800000; font-weight:bold; '>SELECT</span> <span style='color:#800080; '>*</span> <span style='color:#800000; font-weight:bold; '>FROM</span> <span style='color:#800000; '>`</span><span style='color:#000000; background:#ffffff; '>riderequest</span><span style='color:#800000; '>`</span> <span style='color:#800000; font-weight:bold; '>WHERE</span> <span style='color:#800000; '>`</span><span style='color:#000000; background:#ffffff; '>userIDCarpooler</span><span style='color:#800000; '>`</span> <span style='color:#808030; '>=</span> <span style='color:#008c00; '>8</span> <span style='color:#808030; '>AND</span> <span style='color:#800000; '>`</span><span style='color:#000000; background:#ffffff; '>requestStatus</span><span style='color:#800000; '>`</span> <span style='color:#808030; '>=</span> <span style='color:#0000e6; '>'open'</span> <span style='color:#808030; '>OR</span>  <span style='color:#800000; '>`</span><span style='color:#000000; background:#ffffff; '>requestStatus</span><span style='color:#800000; '>`</span> <span style='color:#808030; '>=</span> <span style='color:#0000e6; '>'accepted'</span>
 </pre>
 <br />
-
+</div>
 
 
 
